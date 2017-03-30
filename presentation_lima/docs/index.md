@@ -3,11 +3,11 @@
 
 
 
-## Kristian López Vargas
+### Kristian López Vargas
 
-## University of California, Santa Cruz
+### University of California, Santa Cruz
 
-## Lima, PUCP, marzo, 2017
+### Lima, PUCP, marzo, 2017
 
 -----
 
