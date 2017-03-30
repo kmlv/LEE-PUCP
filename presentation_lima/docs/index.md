@@ -1,11 +1,13 @@
 
 # Aplicaciones de Economía Experimental
 
-#### Kristian López Vargas
 
-#### University of California, Santa Cruz
 
-#### Lima, PUCP, marzo, 2017
+## Kristian López Vargas
+
+## University of California, Santa Cruz
+
+## Lima, PUCP, marzo, 2017
 
 -----
 
