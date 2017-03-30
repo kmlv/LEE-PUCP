@@ -1,5 +1,5 @@
 
-## Aplicaciones de Economía Experimental
+# Aplicaciones de Economía Experimental
 
 #### Kristian López Vargas
 
