@@ -1,0 +1,10 @@
+site_name: Presentación PUCP
+theme: readthedocs
+pages:
+    - Home: index.md
+    - Appendix: appendix.md
+
+extra_css: [extra.css]
+extra_javascript: []
+site_author: Kristian López Vargas
+extra_javascript: ["https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML","js/mathjaxhelper.js"]
