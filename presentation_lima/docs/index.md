@@ -1,11 +1,16 @@
 
 # Aplicaciones de Economía Experimental
 
+</b>
 
-<center> Kristian López Vargas
-University of California, Santa Cruz </center>
+<center> Kristian López Vargas </center>
+
+<center> University of California, Santa Cruz </center>
+
+</b>
 
 <center> Lima, PUCP, marzo, 2017 </center>
+
 
 -----
 
@@ -40,6 +45,16 @@ University of California, Santa Cruz </center>
 <!--
 
 // This piece of code below creates the reveal presentation and pushes to GitHub and then deploys to GitHub pages. Modify the commit message and paste it into terminal.
+
+
+cd docs && \
+pandoc  \
+-t revealjs -V revealjs-url=reveal.js \
+--css=reveal.js/css/theme/simple.css \
+-H reveal.js/js/revealMathJax.js \
+-s index.md -o presentation.html && \
+cd ..
+
 
 cd docs && \
 pandoc  \
