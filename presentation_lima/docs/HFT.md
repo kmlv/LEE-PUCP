@@ -130,7 +130,7 @@ Formatos alternativos intentan reducir los incentivos por velocidad.
 
     * _Snipers_ tratan de comprar (vender) una cotización "obsoleta" y liquidar al nuevo valor fundamental.
 
-* Hay la posibilidad de reducir latency con subscripción a una mejor tecnología de comunicación (mejor protección y mejor arma).
+* Hay la posibilidad de reducir latency (por $ \\Delta \\delta $) con subscripción a una mejor tecnología de comunicación pero cuesta $ c_{speed} $ (mejor protección y mejor arma).
 
 ---------------------------------------------------------
 
