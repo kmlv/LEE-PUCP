@@ -1,7 +1,9 @@
 site_name: Presentación PUCP
 theme: readthedocs
 pages:
-    - Presentation: index.md
+    - Home: index.md
+    - Presentation: presentation.md
+    - HFT: hft.md
     - Appendix: appendix.md
 
 extra_css: [extra.css]

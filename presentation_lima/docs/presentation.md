@@ -280,7 +280,7 @@ pandoc  \
 -t revealjs -V revealjs-url=reveal.js \
 --css=reveal.js/css/theme/simple.css \
 -H reveal.js/js/revealMathJax.js \
--s index.md -o presentation.html && \
+-s presentation.md -o presentation.html && \
 cd ..
 
 
@@ -289,7 +289,7 @@ pandoc  \
 -t revealjs -V revealjs-url=reveal.js \
 --css=reveal.js/css/theme/simple.css \
 -H reveal.js/js/revealMathJax.js \
--s index.md -o presentation.html && \
+-s presentation.md -o presentation.html && \
 cd .. && \
 git add docs/* && \
 git commit -am " add content to presentation.md " && \
