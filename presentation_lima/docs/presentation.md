@@ -31,7 +31,7 @@
 
 ## Experimentos: qué son
 
-Procedimiento y medición realizados con la finalidad de refutar una hipótesis.
+Procedimiento y medición realizados con la finalidad de refutar una hipótesis (o comparar desempeño).
 
 * Control experimental: realizar el "mismo" procedimiento con sólo una diferencia (la de interés).
 
@@ -111,7 +111,7 @@ _"La economía experimental es esencialmente un método de investigación empír
 
 * Plott y Smith, 1978, comparan dos instituciones de mercado, CDA y _posted-offer_, y encuentran que CDA es más eficiente.
 
-* En general el equilibrio competitivo organiza los datos, pese a que no hay subastador que limite el intercambio a precios distintos a los de equilibrio.
+* En general el equilibrio competitivo organiza los datos, pese a que no hay subastador que evite el intercambio a precios de desequilibrio.
 
     * los precios están en el intervalo previsto.
     * La eficiencia (TS observado / TS potencial) es alto.
@@ -136,7 +136,7 @@ _"La economía experimental es esencialmente un método de investigación empír
 
 * Burbujas de precios:  Smith et al, 1988; Noussair y Tucker, 2006.
 
-* ...más allá de mecanismos de precios: "... experimental and computational economics are natural complements to game theory in the work of design..." Roth 2002
+* ...más allá de mecanismos de precios: Auctions, matching mechanisms, etc., etc. "... experimental and computational economics are natural complements to game theory in the work of design..." (Roth, 2002).
 
 -----
 
@@ -146,7 +146,9 @@ _"La economía experimental es esencialmente un método de investigación empír
 
     * Riesgo: _prospect theory_, aversión a la pérdida y efecto dotación (Tversky and Kahneman, 1979; Kahneman, Knetsch, Thaler, 1990;...)
 
-    * preferencias sociales: aversión a la desigualdad, altruismo, confianza (Fehr & Schmidt, 1999; Charness & Rabin, 2001, Andreoni and Miller, 2002; Choi et al, 2006; ...)
+    * Preferencias "sociales": aversión a la desigualdad, altruismo, confianza (Fehr & Schmidt, 1999; Charness & Rabin, 2001, Andreoni and Miller, 2002; Choi et al, 2006; ...)
+
+    * Otros: elección inter-temporal, emociones, ...
 
 -----
 
@@ -189,7 +191,7 @@ Objeciones comunes (basado en Levit y List, 2007):
 
 ------
 
-# 2. Aspectos prácticos del laboratorio de economía
+# 2. Aspectos prácticos del laboratorio de EE
 
 ![](http://experimental.econ.umd.edu/experimental.jpg)
 
