@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="reveal.js/css/reveal.css">
   <style type="text/css">code{white-space: pre;}</style>
   <link rel="stylesheet" href="reveal.js/css/theme/black.css" id="theme">
-  <link rel="stylesheet" href="reveal.js/css/theme/black.css"/>
+  <link rel="stylesheet" href="reveal.js/css/theme/simple.css"/>
   <!-- Printing and PDF exports -->
   <script>
     var link = document.createElement( 'link' );
@@ -43,9 +43,11 @@
 
 <section id="experimentos-en-transacciones-de-alta-frecuencia" class="slide level2">
 <h2>Experimentos en Transacciones de Alta Frecuencia</h2>
-<p>Eric Aldrich, Dan Friedman, Kristian López-Vargas <!--Let's discuss scope of presentation (whole vs lab); Where do we mention Peter? etc--> University of California, Santa Cruz</p>
-<p>Pontificia Universidad Católica del Perú</p>
-<p>Lima, marzo 2017</p>
+<h4 id="eric-aldrich-dan-friedman-kristian-lópez-vargas">Eric Aldrich, Dan Friedman, Kristian López-Vargas</h4>
+<!--Let's discuss scope of presentation (whole vs lab); Where do we mention Peter? etc-->
+<h4 id="university-of-california-santa-cruz">University of California, Santa Cruz</h4>
+<h4 id="pontificia-universidad-católica-del-perú">Pontificia Universidad Católica del Perú</h4>
+<h4 id="lima-marzo-2017">Lima, marzo 2017</h4>
 </section>
 <section id="motivación" class="slide level2">
 <h2>Motivación</h2>
@@ -81,55 +83,68 @@
 <li>Subasta doble continua (CDA).     </li>
 <li>Dos alternativas: FBA, IEX.</li>
 </ul></li>
+<li><p><strong>Dos etapas</strong>:</p>
+<ul>
+<li><p>Laboratorio (en curso).</p></li>
+<li>Campo (torneo abierto, en inicios).  </li>
+</ul></li>
+<li><p><strong>Resultados y métricas de desempeño</strong>: liquidez, estabilidad y costos de transacción.</p></li>
 </ul>
-<p>** <strong>Dos etapas</strong>:</p>
-<p>     * Laboratorio (en curso).      * Campo (torneo abierto, en inicios).   * <strong>Resultados y métricas de desempeño</strong>: liquidez, estabilidad y costos de transacción.</p>
 </section>
 <section id="formato-baseline" class="slide level2">
 <h2>Formato baseline</h2>
 <ul>
-<li>Formato de mercado base: subasta doble continua (CDA)</li>
+<li><p>Formato de mercado base: subasta doble continua (CDA)</p>
+<ul>
+<li>Organiza el comercio en casi todos los principales intercambios.      </li>
+<li>Pedidos procesados inmediatamente con prioridad de precio-tiempo.  </li>
+<li>La tecnología de velocidad es crucial.</li>
+</ul></li>
 </ul>
-<p>     * Organiza el comercio en casi todos los principales intercambios.            * Pedidos procesados inmediatamente con prioridad de precio-tiempo.        * La tecnología de velocidad es crucial.</p>
 </section>
 <section id="formatos-de-mercado-alternativos" class="slide level2">
 <h2>Formatos de mercado alternativos</h2>
-<p>      * Formatos alternativos intentan reducir los incentivos por velocidad.     1. Subasta por lote frecuente (FBA): igualdad de prioridad a los pedidos recibidos en el mismo lote (por ejemplo, durante una décima de segundo).</p>
-<pre><code>2. IEX: retrasa las órdenes entrantes en 350 $ \ smash {\ mu} $ s, permite órdenes ocultas y &quot;vinculadas&quot;.
-
-3. Otros</code></pre>
-</section>
-<section id="section" class="slide level2">
-<h2>    </h2>
+<ol type="1">
+<li><p>Subasta por lote/batch frecuente (FBA): igualdad de prioridad a los pedidos recibidos en el mismo lote (e.g. una décima de segundo).</p></li>
+<li><p>IEX: retrasa las órdenes entrantes en 350 ms, permite órdenes ocultas y &quot;vinculadas&quot;.</p></li>
+<li><p>Otros</p></li>
+</ol>
+<p>Formatos alternativos intentan reducir los incentivos por velocidad.</p>
 </section>
 <section id="implementación-en-el-laboratorio" class="slide level2">
 <h2>Implementación en el laboratorio</h2>
 <ul>
-<li>Entorno de laboratorio <u> simple </u>:</li>
-</ul>
-<p>     * Basado en Budish, Cramton y Shim (BCS, 2015).           * CDA y FBA</p>
+<li><p>Entorno de laboratorio <u> simple </u>:</p>
 <ul>
+<li>Basado en Budish, Cramton y Shim (BCS, 2015).     </li>
+<li>CDA y FBA</li>
+</ul></li>
 <li><p>Los participantes operan algoritmos que envían órdenes en su nombre.</p></li>
 <li><p>Se añaden características pertinentes de los intercambios modernos de uno en uno.</p></li>
 </ul>
 </section>
 <section id="ambiente-de-lab-1-cda-en-bcs" class="slide level2">
 <h2>Ambiente de lab 1: CDA en BCS</h2>
-<p>  * No hay asim de información o costos de inventario, todos son neutrales al riesgo.</p>
 <ul>
+<li><p>No hay asim de información o costos de inventario, todos son neutrales al riesgo.</p></li>
 <li><p>Valor fundamental, públicamente observado $ V(t) $ (Poisson jump process),</p></li>
 <li><p>Inversores exógenos llegan al mercado aleatoriamente</p></li>
 <li><p>&quot;Makers&quot; postean bids/asks y &quot;snipers&quot; esperan oportunidades de arbitraje.</p></li>
-<li><p>Después de un salto de $ V $:</p>
-<ul>
-<li><p><em>Makers</em> tratan de actualizar.</p></li>
-<li><p><em>snipers</em> tratan de comprar (vender) una cotización &quot;obsoleta&quot; y liquidar al nuevo valor fundamental.</p></li>
-</ul></li>
-<li><p>Hay la posibilidad de reducir latency con subscripción a una mejor tecnología de comunicación.</p></li>
 </ul>
 </section>
 <section id="ambiente-de-lab-1-cda-en-bcs-1" class="slide level2">
 <h2>Ambiente de lab 1: CDA en BCS</h2>
+<ul>
+<li><p>Después de un salto de $ V $:</p>
+<ul>
+<li><p><em>Makers</em> tratan de actualizar.</p></li>
+<li><p><em>Snipers</em> tratan de comprar (vender) una cotización &quot;obsoleta&quot; y liquidar al nuevo valor fundamental.</p></li>
+</ul></li>
+<li><p>Hay la posibilidad de reducir latency con subscripción a una mejor tecnología de comunicación (mejor protección y mejor arma).</p></li>
+</ul>
+</section>
+<section id="ambiente-de-lab-1-cda-en-bcs-equilibrio" class="slide level2">
+<h2>Ambiente de lab 1: CDA en BCS: Equilibrio</h2>
 <ul>
 <li><p>En equilibrio, el <em>market spread</em> es positivo $ s^* &gt; 0 $ , pero...</p></li>
 <li><p>No hay ganancias por que hay que pagar la subscripción</p></li>
@@ -148,7 +163,7 @@
 <li><p>Las órdenes de compra venta son recibidas de forma continua.</p></li>
 <li><p>El día de negociación es dividido en muchas fases de igual duración, el batch o lote ($ \tau $).</p></li>
 <li><p>Al cierre del batch, todas las órdenes de compra (venta) se combinan para generar una curva de demanda escalonada (oferta).</p></li>
-<li><p>Se calcula el precio de equilibrio $ p^$, y las ordenes inframargales se ejecutan a dicho precio.</p></li>
+<li><p>Se calcula el precio de equilibrio $ p^* $, y las ordenes inframargales se ejecutan a dicho precio.</p></li>
 </ul>
 </section>
 <section id="ambiente-de-lab-2-fba-en-bcs-equilibrio" class="slide level2">
@@ -352,7 +367,7 @@ cd ..
 cd docs && \
 pandoc  \
 -t revealjs -V revealjs-url=reveal.js \
---css=reveal.js/css/theme/black.css \
+--css=reveal.js/css/theme/simple.css \
 -H reveal.js/js/revealMathJax.js \
 -s HFT.md -o HFT.html && \
 cd .. && \

@@ -1,14 +1,13 @@
 ## Experimentos en Transacciones de Alta Frecuencia
 
 
-Eric Aldrich,  Dan Friedman,  Kristian López-Vargas 
+#### Eric Aldrich,  Dan Friedman,  Kristian López-Vargas
 <!--Let's discuss scope of presentation (whole vs lab); Where do we mention Peter? etc-->
-University of California, Santa Cruz
+#### University of California, Santa Cruz
 
+#### Pontificia Universidad Católica del Perú
 
-Pontificia Universidad Católica del Perú
-
-Lima, marzo 2017
+#### Lima, marzo 2017
 
 
 --------------------------------------------------------
@@ -61,10 +60,11 @@ Lima, marzo 2017
     
     * Dos alternativas:  FBA, IEX.
 
-** **Dos etapas**:
+* **Dos etapas**:
 
-     * Laboratorio (en curso).
-     * Campo (torneo abierto, en inicios).
+    * Laboratorio (en curso).
+
+    * Campo (torneo abierto, en inicios).
  
 * **Resultados y métricas de desempeño**: liquidez, estabilidad y costos de transacción.
 
@@ -75,33 +75,34 @@ Lima, marzo 2017
 
 * Formato de mercado base: subasta doble continua (CDA)
 
-     * Organiza el comercio en casi todos los principales intercambios.
+    * Organiza el comercio en casi todos los principales intercambios.
      
-     * Pedidos procesados inmediatamente con prioridad de precio-tiempo.
+    * Pedidos procesados inmediatamente con prioridad de precio-tiempo.
  
-     * La tecnología de velocidad es crucial.
+    * La tecnología de velocidad es crucial.
 
 --------------------------------------------------------
 
 ## Formatos de mercado alternativos
-     
-* Formatos alternativos intentan reducir los incentivos por velocidad.
-   
-    1. Subasta por lote frecuente (FBA): igualdad de prioridad a los pedidos recibidos en el mismo lote (por ejemplo, durante una décima de segundo).
 
-    2. IEX: retrasa las órdenes entrantes en 350 $ \ smash {\ mu} $ s, permite órdenes ocultas y "vinculadas".
+1. Subasta por lote/batch frecuente (FBA): igualdad de prioridad a los pedidos
+recibidos en el mismo lote (e.g. una décima de segundo).
 
-    3. Otros
-    
+2. IEX: retrasa las órdenes entrantes en 350 ms, permite órdenes ocultas y "vinculadas".
+
+3. Otros
+
+Formatos alternativos intentan reducir los incentivos por velocidad.
+
 --------------------------------------------------------
 
 ## Implementación en el laboratorio
 
 * Entorno de laboratorio <u> simple </u>:
 
-     * Basado en Budish, Cramton y Shim (BCS, 2015).
+    * Basado en Budish, Cramton y Shim (BCS, 2015).
     
-     * CDA y FBA
+    * CDA y FBA
 
 * Los participantes operan algoritmos que envían órdenes en su nombre.
 
@@ -110,7 +111,7 @@ Lima, marzo 2017
 ---------------------------------------------------------
 
 ## Ambiente de lab 1: CDA en BCS
- 
+
 * No hay asim de información o costos de inventario, todos son neutrales al riesgo.
 
 * Valor fundamental, públicamente observado  $ V(t) $ (Poisson jump process),
@@ -119,17 +120,21 @@ Lima, marzo 2017
 
 * "Makers" postean bids/asks y "snipers" esperan oportunidades de arbitraje.
 
+---------------------------------------------------------
+
+## Ambiente de lab 1: CDA en BCS
+
 * Después de un salto de $ V $:
     
     * _Makers_ tratan de actualizar.
 
-    * _snipers_ tratan de comprar (vender) una cotización "obsoleta" y liquidar al nuevo valor fundamental.
+    * _Snipers_ tratan de comprar (vender) una cotización "obsoleta" y liquidar al nuevo valor fundamental.
 
-* Hay la posibilidad de reducir latency con subscripción a una mejor tecnología de comunicación.
+* Hay la posibilidad de reducir latency con subscripción a una mejor tecnología de comunicación (mejor protección y mejor arma).
 
 ---------------------------------------------------------
 
-## Ambiente de lab 1: CDA en BCS
+## Ambiente de lab 1: CDA en BCS: Equilibrio
 
 * En equilibrio, el _market spread_ es positivo $ s^\* > 0 $ , pero...
 
@@ -155,7 +160,7 @@ Lima, marzo 2017
  
 * Al cierre del batch, todas las órdenes de compra (venta) se combinan para generar una curva de demanda escalonada (oferta).
 
-* Se calcula el precio de equilibrio $ p^\star $, y las ordenes inframargales se ejecutan a dicho precio.
+* Se calcula el precio de equilibrio $ p^\* $, y las ordenes inframargales se ejecutan a dicho precio.
 
 ----------------------------------------------------------
 
@@ -333,7 +338,7 @@ cd ..
 cd docs && \
 pandoc  \
 -t revealjs -V revealjs-url=reveal.js \
---css=reveal.js/css/theme/black.css \
+--css=reveal.js/css/theme/simple.css \
 -H reveal.js/js/revealMathJax.js \
 -s HFT.md -o HFT.html && \
 cd .. && \
