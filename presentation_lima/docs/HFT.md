@@ -12,6 +12,7 @@ Lima, marzo 2017
 
 
 --------------------------------------------------------
+
 ## Motivación
 
 * La velocidad de transacciones ha disminuido rápidamente.
