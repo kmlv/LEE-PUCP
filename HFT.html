@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="reveal.js/css/reveal.css">
   <style type="text/css">code{white-space: pre;}</style>
   <link rel="stylesheet" href="reveal.js/css/theme/black.css" id="theme">
-  <link rel="stylesheet" href="reveal.js/css/theme/simple.css"/>
+  <link rel="stylesheet" href="reveal.js/css/theme/black.css"/>
   <!-- Printing and PDF exports -->
   <script>
     var link = document.createElement( 'link' );
@@ -217,10 +217,6 @@
 <li><p><span class="math inline">$\smash{\delta_{slow} = 0.5s}$</span>: About 10 times larger than actual Chicago <span class="math inline">$\smash{\rightarrow}$</span> NY latency, after accounting for our time scaling.</p></li>
 <li><p>In FBA, batch interval was 5 secs (1.25 secs, market time); reporting lag was essentially zero; default latency / interval = 0.1.</p></li>
 </ul>
-<!--(In our pilot experiment, the ratio is 0.5/5 = 0.10; in more realistic settings it might be closer to 0.01.)
-<!--On August 10, 2016 we conducted a pilot experiment with a Redwood II prototype of CDA and FBA matching engines, using the interfaces shown in Figures 2 and 3. In each format, two groups of four players each completed three five-minute periods. Each period, stochastic realizations using λ_V= 4, λ_B=λ_S=λ_I= 3, F_V  = N(0,0.5), cs=$0.01/sec, τ = 0.5 sec and initial V = 100 were matched across groups and formats; each trading period here roughly translates to a 80 second segment on the NASDAQ OMX exchange for the high-volume SPY contract. In FBA, the batching interval was 5 seconds and the reporting lag was essentially zero.-->
-<!--We found a weak uptrend for snipers in CDA, but the share never exceeded 43%; in equilibrium of the BCS model the sniper share is 75%. In FBA the sniper share trended down, as predicted in BCS equilibrium, and fell below 20% in period 3. Almost all other players were makers; Out shares were always miniscule. The share of traders choosing speed trended up in CDA as predicted, reaching almost ⅔ in period 3, and trended down (also consistent with prediction) in FBA, falling to 11% in period 3. -->
-<!--(In our pilot experiment, the ratio is 0.5/5 = 0.10; in more realistic settings it might be closer to 0.01.)-->
 </section>
 <section id="summary-results" class="slide level2">
 <h2>Summary Results</h2>
@@ -349,28 +345,20 @@ The event history box indicates that player 1 is about 48 seconds into the tradi
 <!--Play / Events Legend:
  Total time 48 seconds. A buying investor arrived during the batching interval [20,25), and a selling investor arrived during the batching interval [30,35). In both batches, trader 1 had the best spread (at 0.9) and had an order filled profitably. 
  Snipers not depicted in the figure. -->
-</section>
-<section id="next-steps-and-discussion" class="slide level2">
-<h2>Next Steps and Discussion</h2>
-<ul>
-<li><p>Development and Productions.</p></li>
-<li><p>More realism in environment.</p></li>
-<li><p>Evidence from the lab and tournaments will improve understanding of financial market design (help regulation and policy)</p></li>
-<li><p>Our infrastructure will be a contribution for future research.</p></li>
-</ul>
+<!-- ##  Next Steps and Discussion -->
+<!-- * Development and Productions. -->
+<!-- * More realism in environment.  -->
+<!-- * Evidence from the lab and tournaments will improve understanding of -->
+<p><!-- financial market design (help regulation and policy) --></p>
+<!-- * Our infrastructure will be a contribution for future research.  -->
 <!--Exploring these differing environments will contribute to fundamental knowledge regarding financial market design. By introducing features one at a time, we will make strong inferences about which environmental aspects shape observed outcomes. By holding constant the realized stochastic process across market formats in any given environment, we can draw causal conclusions regarding comparative performance. For example, we will be able to make clear statements such as “relative to the basic CDA baseline, the IEX format lowers trading cost by 5-8% in normal environment X, but increases value-at-risk by 20-30% in stressful environment Y.” Such statements should help focus conventional econometric analysis of market data, and even by themselves should be helpful for regulators and exchange officials. -->
 <!--We have started the lab stage developing simple environments that allow for HFT. Our current progress and preliminary evidence are encouraging on the feasibility of the project and and the quality of the collected evidence. Further evidence from the laboratory and the implementation of tournaments will constitute valuable scientific knowledge on which formats best promote financial market liquidity and stability and, thus, help improve the design of financial markets. Our research infrastructure will be an important contribution for future research on financial market design. -->
-</section>
-<section id="thanks-to" class="slide level2">
-<h2>Thanks to</h2>
-<ul>
-<li><p>Center for Analytical Finance.</p></li>
-<li><p>Undergraduate programmers, Morgan Grant and Zach Petersen.</p></li>
-<li><p>University of Maryland postdocs, Darrell Hoy and David Malec.</p></li>
-</ul>
-</section>
-<section class="slide level2">
-
+<!-- -------------------------------------------------- -->
+<!-- ##  Thanks to -->
+<!-- * Center for Analytical Finance. -->
+<!-- * Undergraduate programmers, Morgan Grant and Zach Petersen. -->
+<!-- * University of Maryland postdocs, Darrell Hoy and David Malec. -->
+<!-- -------------------------------------------------- -->
 <!--
 
 // This piece of code below creates the reveal presentation and pushes to GitHub and then deploys to GitHub pages. Modify the commit message and paste it into terminal.
@@ -388,7 +376,7 @@ cd ..
 cd docs && \
 pandoc  \
 -t revealjs -V revealjs-url=reveal.js \
---css=reveal.js/css/theme/simple.css \
+--css=reveal.js/css/theme/black.css \
 -H reveal.js/js/revealMathJax.js \
 -s HFT.md -o HFT.html && \
 cd .. && \
