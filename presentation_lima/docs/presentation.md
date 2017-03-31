@@ -241,19 +241,21 @@ Objeciones comunes (basado en Levit y List, 2007):
 
 3) Software de interface e interacción
 
-    * interface vinculado a una base de datos que se actualiza de acuerdo a las reglas del juego y con las acciones de los participantes (e.g. zTree o oTree.org).
+* interface vinculado a una base de datos que se actualiza de acuerdo a las reglas del juego y con las acciones de los participantes (e.g. zTree o oTree.org).
 
 4) Sistema de pagos:
 
-    * usualmente manual, depende de la institución que procesa los fondos
+* usualmente manual, depende de la institución que procesa los fondos
 
 5) Comités de revisión (IRB)
 
-    * varían de institución a institución
+* varían de institución a institución
 
 -------------------------------------------------------------------------
 
-# 3. Aplicación
+# 3. Aplicación en finanzas experimentales
+
+-------------------------------------------------------------------------
 
 
 <!-- ------ -->
