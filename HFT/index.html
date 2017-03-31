@@ -69,6 +69,14 @@
             
                 <li class="toctree-l3"><a href="#experimentos-en-transacciones-de-alta-frecuencia">Experimentos en Transacciones de Alta Frecuencia</a></li>
                 
+                    <li><a class="toctree-l4" href="#eric-aldrich-dan-friedman-kristian-lopez-vargas">Eric Aldrich,  Dan Friedman,  Kristian López-Vargas</a></li>
+                
+                    <li><a class="toctree-l4" href="#university-of-california-santa-cruz">University of California, Santa Cruz</a></li>
+                
+                    <li><a class="toctree-l4" href="#pontificia-universidad-catolica-del-peru">Pontificia Universidad Católica del Perú</a></li>
+                
+                    <li><a class="toctree-l4" href="#lima-marzo-2017">Lima, marzo 2017</a></li>
+                
             
                 <li class="toctree-l3"><a href="#motivacion">Motivación</a></li>
                 
@@ -92,6 +100,9 @@
                 
             
                 <li class="toctree-l3"><a href="#ambiente-de-lab-1-cda-en-bcs_1">Ambiente de lab 1: CDA en BCS</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#ambiente-de-lab-1-cda-en-bcs-equilibrio">Ambiente de lab 1: CDA en BCS: Equilibrio</a></li>
                 
             
                 <li class="toctree-l3"><a href="#ambiente-de-lab-1-cda-en-bcs_2">Ambiente de lab 1: CDA en BCS</a></li>
@@ -163,11 +174,12 @@
             <div class="section">
               
                 <h2 id="experimentos-en-transacciones-de-alta-frecuencia">Experimentos en Transacciones de Alta Frecuencia</h2>
-<p>Eric Aldrich,  Dan Friedman,  Kristian López-Vargas 
+<h4 id="eric-aldrich-dan-friedman-kristian-lopez-vargas">Eric Aldrich,  Dan Friedman,  Kristian López-Vargas</h4>
 <!--Let's discuss scope of presentation (whole vs lab); Where do we mention Peter? etc-->
-University of California, Santa Cruz</p>
-<p>Pontificia Universidad Católica del Perú</p>
-<p>Lima, marzo 2017</p>
+
+<h4 id="university-of-california-santa-cruz">University of California, Santa Cruz</h4>
+<h4 id="pontificia-universidad-catolica-del-peru">Pontificia Universidad Católica del Perú</h4>
+<h4 id="lima-marzo-2017">Lima, marzo 2017</h4>
 <hr />
 <h2 id="motivacion">Motivación</h2>
 <ul>
@@ -226,40 +238,60 @@ University of California, Santa Cruz</p>
 <li>Dos alternativas:  FBA, IEX.</li>
 </ul>
 </li>
+<li>
+<p><strong>Dos etapas</strong>:</p>
+<ul>
+<li>
+<p>Laboratorio (en curso).</p>
+</li>
+<li>
+<p>Campo (torneo abierto, en inicios).
+ </p>
+</li>
+<li><strong>Resultados y métricas de desempeño</strong>: liquidez, estabilidad y costos de transacción.</li>
 </ul>
-<p><strong> </strong>Dos etapas**:</p>
-<p>* Laboratorio (en curso).
-     * Campo (torneo abierto, en inicios).
- 
-* <strong>Resultados y métricas de desempeño</strong>: liquidez, estabilidad y costos de transacción.</p>
+</li>
+</ul>
 <hr />
 <h2 id="formato-baseline">Formato baseline</h2>
 <ul>
-<li>Formato de mercado base: subasta doble continua (CDA)</li>
+<li>
+<p>Formato de mercado base: subasta doble continua (CDA)</p>
+<ul>
+<li>Organiza el comercio en casi todos los principales intercambios.
+     </li>
+<li>Pedidos procesados inmediatamente con prioridad de precio-tiempo.
+ </li>
+<li>La tecnología de velocidad es crucial.</li>
 </ul>
-<p>* Organiza el comercio en casi todos los principales intercambios.
-     
-     * Pedidos procesados inmediatamente con prioridad de precio-tiempo.
- 
-     * La tecnología de velocidad es crucial.</p>
+</li>
+</ul>
 <hr />
 <h2 id="formatos-de-mercado-alternativos">Formatos de mercado alternativos</h2>
-<p>* Formatos alternativos intentan reducir los incentivos por velocidad.
-   
-    1. Subasta por lote frecuente (FBA): igualdad de prioridad a los pedidos recibidos en el mismo lote (por ejemplo, durante una décima de segundo).</p>
-<pre><code>2. IEX: retrasa las órdenes entrantes en 350 $ \ smash {\ mu} $ s, permite órdenes ocultas y "vinculadas".
-
-3. Otros
-</code></pre>
+<ol>
+<li>
+<p>Subasta por lote/batch frecuente (FBA): igualdad de prioridad a los pedidos
+recibidos en el mismo lote (e.g. una décima de segundo).</p>
+</li>
+<li>
+<p>IEX: retrasa las órdenes entrantes en 350 ms, permite órdenes ocultas y "vinculadas".</p>
+</li>
+<li>
+<p>Otros</p>
+</li>
+</ol>
+<p>Formatos alternativos intentan reducir los incentivos por velocidad.</p>
 <hr />
 <h2 id="implementacion-en-el-laboratorio">Implementación en el laboratorio</h2>
 <ul>
-<li>Entorno de laboratorio <u> simple </u>:</li>
-</ul>
-<p>* Basado en Budish, Cramton y Shim (BCS, 2015).
-    
-     * CDA y FBA</p>
+<li>
+<p>Entorno de laboratorio <u> simple </u>:</p>
 <ul>
+<li>Basado en Budish, Cramton y Shim (BCS, 2015).
+    </li>
+<li>CDA y FBA</li>
+</ul>
+</li>
 <li>
 <p>Los participantes operan algoritmos que envían órdenes en su nombre.</p>
 </li>
@@ -269,8 +301,10 @@ University of California, Santa Cruz</p>
 </ul>
 <hr />
 <h2 id="ambiente-de-lab-1-cda-en-bcs">Ambiente de lab 1: CDA en BCS</h2>
-<p>* No hay asim de información o costos de inventario, todos son neutrales al riesgo.</p>
 <ul>
+<li>
+<p>No hay asim de información o costos de inventario, todos son neutrales al riesgo.</p>
+</li>
 <li>
 <p>Valor fundamental, públicamente observado  $ V(t) $ (Poisson jump process),</p>
 </li>
@@ -280,6 +314,10 @@ University of California, Santa Cruz</p>
 <li>
 <p>"Makers" postean bids/asks y "snipers" esperan oportunidades de arbitraje.</p>
 </li>
+</ul>
+<hr />
+<h2 id="ambiente-de-lab-1-cda-en-bcs_1">Ambiente de lab 1: CDA en BCS</h2>
+<ul>
 <li>
 <p>Después de un salto de $ V $:</p>
 <ul>
@@ -287,16 +325,16 @@ University of California, Santa Cruz</p>
 <p><em>Makers</em> tratan de actualizar.</p>
 </li>
 <li>
-<p><em>snipers</em> tratan de comprar (vender) una cotización "obsoleta" y liquidar al nuevo valor fundamental.</p>
+<p><em>Snipers</em> tratan de comprar (vender) una cotización "obsoleta" y liquidar al nuevo valor fundamental.</p>
 </li>
 </ul>
 </li>
 <li>
-<p>Hay la posibilidad de reducir latency con subscripción a una mejor tecnología de comunicación.</p>
+<p>Hay la posibilidad de reducir latency con subscripción a una mejor tecnología de comunicación (mejor protección y mejor arma).</p>
 </li>
 </ul>
 <hr />
-<h2 id="ambiente-de-lab-1-cda-en-bcs_1">Ambiente de lab 1: CDA en BCS</h2>
+<h2 id="ambiente-de-lab-1-cda-en-bcs-equilibrio">Ambiente de lab 1: CDA en BCS: Equilibrio</h2>
 <ul>
 <li>
 <p>En equilibrio, el <em>market spread</em> es positivo $ s^* &gt; 0 $ , pero...</p>
@@ -324,7 +362,7 @@ University of California, Santa Cruz</p>
 <p>Al cierre del batch, todas las órdenes de compra (venta) se combinan para generar una curva de demanda escalonada (oferta).</p>
 </li>
 <li>
-<p>Se calcula el precio de equilibrio $ p^\star $, y las ordenes inframargales se ejecutan a dicho precio.</p>
+<p>Se calcula el precio de equilibrio $ p^* $, y las ordenes inframargales se ejecutan a dicho precio.</p>
 </li>
 </ul>
 <hr />
@@ -593,7 +631,7 @@ cd ..
 cd docs && \
 pandoc  \
 -t revealjs -V revealjs-url=reveal.js \
---css=reveal.js/css/theme/black.css \
+--css=reveal.js/css/theme/simple.css \
 -H reveal.js/js/revealMathJax.js \
 -s HFT.md -o HFT.html && \
 cd .. && \
