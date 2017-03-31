@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="reveal.js/css/reveal.css">
   <style type="text/css">code{white-space: pre;}</style>
   <link rel="stylesheet" href="reveal.js/css/theme/black.css" id="theme">
-  <link rel="stylesheet" href="reveal.js/css/theme/black.css"/>
+  <link rel="stylesheet" href="reveal.js/css/theme/simple.css"/>
   <!-- Printing and PDF exports -->
   <script>
     var link = document.createElement( 'link' );
@@ -41,104 +41,136 @@
     <div class="slides">
 
 
-<section id="experiments-in-high-frequency-trading" class="slide level2">
-<h2>Experiments in High-Frequency Trading</h2>
-<p>Eric Aldrich, Dan Friedman, Kristian López-Vargas <!--Let's discuss scope of presentation (whole vs lab); Where do we mention Peter? etc--></p>
-<p>University of California, Santa Cruz</p>
-<p>Experimental Finance Conference | Tucson, 2016</p>
+<section id="experimentos-en-transacciones-de-alta-frecuencia" class="slide level2">
+<h2>Experimentos en Transacciones de Alta Frecuencia</h2>
+<p>Eric Aldrich, Dan Friedman, Kristian López-Vargas <!--Let's discuss scope of presentation (whole vs lab); Where do we mention Peter? etc--> University of California, Santa Cruz</p>
+<p><b/></p>
+<p>Pontificia Universidad Católica del Perú</p>
+<p>Lima, marzo 2017</p>
+<table style="width:78%;">
+<colgroup>
+<col style="width: 77%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">## Motivación</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">* La velocidad de transacciones ha disminuido rápidamente.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">* las Transacciones de Alta Frecuencia (HFTs) representan una gran fracción de operaciones en todo el mundo.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">* A favor: HFT aumenta la liquidez, reduce los costos de transacción.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">* En contra: El costo de la infraestructura de HFT es soportado por los inversionistas; La liquidez desaparece cuando más se necesita.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><!-- ## Motivation  --></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><!-- * Trading latencies have rapidly declined.  --></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><!-- * HFTs account for a large fraction of trades worldwide. --></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><!-- * Proponents: HFT increases liquidity, reduces transaction costs.  --></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><!-- * Opponents: The cost of HFT infrastructure is borne by investors; liquidity vanishes when most needed. --></td>
+</tr>
+</tbody>
+</table>
 </section>
-<section id="motivation" class="slide level2">
-<h2>Motivation</h2>
+<section id="plan-de-investigación" class="slide level2">
+<h2>Plan de investigación</h2>
 <ul>
-<li><p>Trading latencies have rapidly declined.</p></li>
-<li><p>HFTs account for a large fraction of trades worldwide.</p></li>
-<li><p>Proponents: HFT increases liquidity, reduces transaction costs.</p></li>
-<li><p>Opponents: The cost of HFT infrastructure is borne by investors; liquidity vanishes when most needed.</p></li>
+<li><p>Los datos existentes son insuficientes para resolver la controversia.</p></li>
+<li><p>Los experimentos son una alternativa superior para comparar científicamente los formatos de mercado en presencia de HFT.</p></li>
+<li><p>En este paper utilizamos experimentos (de laboratorio (y de campo)) para comparar formatos de mercado relevantes.</p></li>
 </ul>
+<!-- ## Research Plan   -->
+<!-- * Existing data are insufficient to resolve the controversy. -->
+<!-- * Experiments are a superior alternative to scientifically compare market formats in the presence of HFT. -->
+<!-- * We use experiments (lab and field) to compare relevant market formats. -->
 </section>
-<section id="research-plan" class="slide level2">
-<h2>Research Plan</h2>
+<section id="diseño-de-la-investigación" class="slide level2">
+<h2>Diseño de la investigación</h2>
 <ul>
-<li><p>Existing data are insufficient to resolve the controversy.</p></li>
-<li><p>Experiments are a superior alternative to scientifically compare market formats in the presence of HFT.</p></li>
-<li><p>We use experiments (lab and field) to compare relevant market formats.</p></li>
-</ul>
-</section>
-<section id="research-design" class="slide level2">
-<h2>Research Design</h2>
+<li><p><strong>Examinar 3 formatos de mercado</strong>:</p>
 <ul>
-<li><p><strong>Examine 4 formats</strong>:</p>
-<ul>
-<li>Continuous Double Auction (CDA).</li>
-<li>Three alternatives -- FBA, IEX, EBS.</li>
-</ul></li>
-<li><p><strong>Two stages</strong>:</p>
-<ul>
-<li>Laboratory (ongoing).</li>
-<li>Field (open tournament - early stage).</li>
-</ul></li>
-<li><p><strong>Outcomes and metrics of performance</strong>: liquidity, stability, and transactions costs.</p></li>
-</ul>
-</section>
-<section id="baseline-market-format" class="slide level2">
-<h2>Baseline Market Format</h2>
-<ul>
-<li><p>Baseline market format: Continuous Double Auction (CDA)</p>
-<ul>
-<li><p>Organizes trade in nearly all major exchanges.</p></li>
-<li><p>Orders processed immediately with price-time priority.</p></li>
-<li><p>Speed technology is crucial.</p></li>
-</ul></li>
-</ul>
-</section>
-<section id="alternative-market-formats" class="slide level2">
-<h2>Alternative Market Formats</h2>
-<ul>
-<li><p>Three alternative formats attempt to reduce the incentives for speed.</p>
-<ol type="1">
-<li><p>Frequent batch auction (FBA): equal priority to orders received in the same batch (e.g. a tenth of a second).</p></li>
-<li><p>IEX: delays incoming orders by 350 <span class="math inline">$\smash{\mu}$</span>s, allows hidden, “pegged” orders.</p></li>
-<li><p>EBS: within a narrow time window, randomizes the sequence in which orders are processed.</p></li>
-</ol></li>
-</ul>
-</section>
-<section id="laboratory-implementation" class="slide level2">
-<h2>Laboratory Implementation</h2>
-<ul>
-<li><p>Formats in simple laboratory environment:</p>
-<ul>
-<li><p>Based on Budish, Cramton and Shim (BCS, 2015).</p></li>
-<li><p>CDA and FBA</p></li>
-</ul></li>
-<li><p>Participants tune algorithms that place orders on their behalf.</p></li>
-<li><p>Will add relevant features of modern exchanges one at a time.</p></li>
-</ul>
-</section>
-<section id="cda-equilibrium-in-bcs" class="slide level2">
-<h2>CDA Equilibrium in BCS</h2>
-<ul>
-<li><p>No asym. info or inventory costs, everyone risk neutral.</p></li>
-<li><p>Bertrand competition, but equilibrium spread &gt; 0.</p></li>
-<li><p>Positive spread is related to jumps in <span class="math inline">$\smash{V(t)}$</span>:</p>
-<ul>
-<li><p>Maker sends a replace order.</p></li>
-<li><p>Others try to buy (sell) at stale quote and liquidate at new fundamental (&quot;snipe&quot;).</p></li>
-<li><p>Sniping probability <span class="math inline">$\smash{\frac{N-1}{N}}$</span>.</p></li>
-<li><p>Sniping generates arbitrage rents paid by investors.</p></li>
+<li>Subasta doble continua (CDA).     </li>
+<li>Dos alternativas: FBA, IEX.</li>
 </ul></li>
 </ul>
+<p>** <strong>Dos etapas</strong>:</p>
+<p>     * Laboratorio (en curso).      * Campo (torneo abierto, en inicios).   * <strong>Resultados y métricas de desempeño</strong>: liquidez, estabilidad y costos de transacción.</p>
 </section>
-<section id="fba-in-general" class="slide level2">
-<h2>FBA in General</h2>
+<section id="formato-baseline" class="slide level2">
+<h2>Formato baseline</h2>
 <ul>
-<li><p>Orders are (still) continuously time-stamped.</p></li>
-<li><p>Trading day divided into many equal-length <em>submission stages</em> (of length <span class="math inline">$\smash{\tau}$</span>).</p></li>
-<li><p>At closing, all standing buy (sell) orders are combined to generate a stair-step demand (supply) curve.</p></li>
-<li><p>Market clearing (equilibrium) price <span class="math inline">$\smash{p^\star}$</span> is computed, and infra-marginal bids and asks are executed at a uniform price <span class="math inline">$\smash{p^\star}$</span>.</p></li>
+<li>Formato de mercado base: subasta doble continua (CDA)</li>
+</ul>
+<p>     * Organiza el comercio en casi todos los principales intercambios.            * Pedidos procesados inmediatamente con prioridad de precio-tiempo.        * La tecnología de velocidad es crucial.</p>
+</section>
+<section id="formatos-de-mercado-alternativos" class="slide level2">
+<h2>Formatos de mercado alternativos</h2>
+<p>      * Formatos alternativos intentan reducir los incentivos por velocidad.     1. Subasta por lote frecuente (FBA): igualdad de prioridad a los pedidos recibidos en el mismo lote (por ejemplo, durante una décima de segundo).</p>
+<pre><code>2. IEX: retrasa las órdenes entrantes en 350 $ \ smash {\ mu} $ s, permite órdenes ocultas y &quot;vinculadas&quot;.
+
+3. Otros</code></pre>
+</section>
+<section id="section" class="slide level2">
+<h2>    </h2>
+</section>
+<section id="implementación-en-el-laboratorio" class="slide level2">
+<h2>Implementación en el laboratorio</h2>
+<ul>
+<li>Entorno de laboratorio <u> simple </u>:</li>
+</ul>
+<p>     * Basado en Budish, Cramton y Shim (BCS, 2015).           * CDA y FBA</p>
+<ul>
+<li><p>Los participantes operan algoritmos que envían órdenes en su nombre.</p></li>
+<li><p>Se añaden características pertinentes de los intercambios modernos de uno en uno.</p></li>
 </ul>
 </section>
-<section id="fba-equilibrium-in-bcs" class="slide level2">
-<h2>FBA Equilibrium in BCS</h2>
+<section id="ambiente-de-lab-1-cda-en-bcs" class="slide level2">
+<h2>Ambiente de lab 1: CDA en BCS</h2>
+<p>  * No hay asim de información o costos de inventario, todos son neutrales al riesgo.</p>
+<ul>
+<li><p>Valor fundamental, públicamente observado $ V(t) $ (Poisson jump process),</p></li>
+<li><p>Inversores exógenos llegan al mercado aleatoriamente</p></li>
+<li><p>&quot;Makers&quot; postean bids/asks y &quot;snipers&quot; esperan oportunidades de arbitraje.</p></li>
+<li><p>Después de un salto de $ V $:</p>
+<ul>
+<li><p><em>Makers</em> tratan de actualizar.</p></li>
+<li><p><em>snipers</em> tratan de comprar (vender) una cotización &quot;obsoleta&quot; y liquidar al nuevo valor fundamental.</p></li>
+</ul></li>
+<li><p>Hay la posibilidad de reducir latency con subscripción a una mejor tecnología de comunicación.</p></li>
+</ul>
+</section>
+<section id="ambiente-de-lab-1-cda-en-bcs-1" class="slide level2">
+<h2>Ambiente de lab 1: CDA en BCS</h2>
+<ul>
+<li><p>En equilibrio, el <em>market spread</em> es positivo $ s^* &gt; 0 $ , pero...</p></li>
+<li><p>No hay ganancias por que hay que pagar la subscripción</p></li>
+<li><p>Sólo queda un maker y el resto es sniper</p></li>
+</ul>
+</section>
+<section id="ambiente-de-lab-2-fba-en-bcs" class="slide level2">
+<h2>Ambiente de lab 2: FBA en BCS</h2>
+<ul>
+<li><p>Las órdenes de compra venta son recibidas de forma continua.</p></li>
+<li><p>El día de negociación es dividido en muchas fases de igual duración, el batch o lote ($ \tau $).</p></li>
+<li><p>Al cierre del batch, todas las órdenes de compra (venta) se combinan para generar una curva de demanda escalonada (oferta).</p></li>
+<li><p>Se calcula el precio de equilibrio $ p^$, y las ordenes inframargales se ejecutan a dicho precio.</p></li>
+</ul>
+</section>
+<section id="ambiente-de-lab-2-fba-en-bcs-1" class="slide level2">
+<h2>Ambiente de lab 2: FBA en BCS</h2>
 <ul>
 <li>Bertrand competition: Zero bid-ask spread.
 <ul>
