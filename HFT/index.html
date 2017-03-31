@@ -94,10 +94,16 @@
                 <li class="toctree-l3"><a href="#ambiente-de-lab-1-cda-en-bcs_1">Ambiente de lab 1: CDA en BCS</a></li>
                 
             
+                <li class="toctree-l3"><a href="#ambiente-de-lab-1-cda-en-bcs_2">Ambiente de lab 1: CDA en BCS</a></li>
+                
+            
                 <li class="toctree-l3"><a href="#ambiente-de-lab-2-fba-en-bcs">Ambiente de lab 2: FBA en BCS</a></li>
                 
             
-                <li class="toctree-l3"><a href="#ambiente-de-lab-2-fba-en-bcs_1">Ambiente de lab 2: FBA en BCS</a></li>
+                <li class="toctree-l3"><a href="#ambiente-de-lab-2-fba-en-bcs-equilibrio">Ambiente de lab 2: FBA en BCS: Equilibrio</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#ambiente-de-lab-2-fba-en-bcs_1">Ambiente de lab 2: FBA en BCS:</a></li>
                 
             
                 <li class="toctree-l3"><a href="#pilot-experiment">Pilot Experiment</a></li>
@@ -107,12 +113,6 @@
                 
             
                 <li class="toctree-l3"><a href="#pilot-parameters_1">Pilot Parameters</a></li>
-                
-            
-                <li class="toctree-l3"><a href="#cda-in-the-lab">CDA in the Lab</a></li>
-                
-            
-                <li class="toctree-l3"><a href="#fba-in-the-lab">FBA in the Lab</a></li>
                 
             
                 <li class="toctree-l3"><a href="#summary-results">Summary Results</a></li>
@@ -316,6 +316,9 @@ University of California, Santa Cruz</p>
 </li>
 </ul>
 <hr />
+<h2 id="ambiente-de-lab-1-cda-en-bcs_2">Ambiente de lab 1: CDA en BCS</h2>
+<p><img alt="" src="../img/CDA.png" /></p>
+<hr />
 <h2 id="ambiente-de-lab-2-fba-en-bcs">Ambiente de lab 2: FBA en BCS</h2>
 <ul>
 <li>
@@ -332,22 +335,24 @@ University of California, Santa Cruz</p>
 </li>
 </ul>
 <hr />
-<h2 id="ambiente-de-lab-2-fba-en-bcs_1">Ambiente de lab 2: FBA en BCS</h2>
+<h2 id="ambiente-de-lab-2-fba-en-bcs-equilibrio">Ambiente de lab 2: FBA en BCS: Equilibrio</h2>
 <ul>
 <li>
-<p>Bertrand competition: Zero bid-ask spread.</p>
-<ul>
-<li>$\smash{\forall \tau &gt; 0}$ (discontinuity between CDA/FBA).</li>
-</ul>
+<p>Casi todos los saltos del valor fundamental no ponen en riesgo las órdenes de los <em>makers</em>. Entonces el incentivo a ser rápido se desvanece.</p>
 </li>
 <li>
-<p>(Slow) firms supply $\smash{\bar{Q}}$ units of liquidity at zero spread.</p>
+<p>Competencia Bertrand: hasta alcanzar bid-ask spread nulo $ s^* = 0 $.</p>
 </li>
 <li>
-<p>$\smash{\tau &gt;&gt; \Delta \delta \Rightarrow}$ no one invests in speed:</p>
+<p>Los snipers solo hacen ganancias en eventos muy improbables.</p>
+</li>
+<li>
+<p>Si $\smash{\tau &gt;&gt; \Delta \delta \Rightarrow}$ Nadie invierte en speed.</p>
 </li>
 </ul>
-<p>$$\smash{\frac{\Delta\delta \, \lambda_V}{\tau} \, \mathbb{E}(J) \, \bar{Q} &lt; c_{speed} }$$</p>
+<hr />
+<h2 id="ambiente-de-lab-2-fba-en-bcs_1">Ambiente de lab 2: FBA en BCS:</h2>
+<p><img alt="" src="../img/FBA.png" /></p>
 <hr />
 <h2 id="pilot-experiment">Pilot Experiment</h2>
 <ul>
@@ -410,47 +415,6 @@ University of California, Santa Cruz</p>
 <!--We found a weak uptrend for snipers in CDA, but the share never exceeded 43%; in equilibrium of the BCS model the sniper share is 75%. In FBA the sniper share trended down, as predicted in BCS equilibrium, and fell below 20% in period 3. Almost all other players were makers; Out shares were always miniscule. The share of traders choosing speed trended up in CDA as predicted, reaching almost ⅔ in period 3, and trended down (also consistent with prediction) in FBA, falling to 11% in period 3. -->
 
 <!--(In our pilot experiment, the ratio is 0.5/5 = 0.10; in more realistic settings it might be closer to 0.01.)-->
-
-<!------------------------------------------------------------>
-
-<!--## Pilot Session-->
-
-<!--* Simplest lab environment is adapted from BCS.-->
-
-<p><!---->
-<!--* Single asset, single exchange, continuous price.--></p>
-<!--* $\smash{V(t)}$: exogenous, compound Poisson process, jump rate $\smash{λ_V}$, jump distribution $\smash{F_V}$.-->
-
-<p><!---->
-<!--* Automated investors: exogenous stream of market buy/sell orders, Poisson arrival rates $\smash{\lambda_I}$.--></p>
-<!--* Traders control bots/algorithms which place orders on their behalf, conditional on market conditions and strategies (_{out, making, sniping}_, _{fast, slow}_).-->
-
-<!-- The simplest lab environment is adapted from BCS. A single asset is traded on a single exchange, and price is a continuous variable. The fundamental value V(t) is determined exogenously by a compound Poisson process with arrival rate λ_V and jump distribution F_V. Players’ profit opportunities come from “investors” represented by an exogenous stream of unit market orders to buy (limit price very high) and to sell (limit price 0) with Poisson arrival rates λ_B=λ_S=λ_I.-->
-
-<hr />
-<h2 id="cda-in-the-lab">CDA in the Lab</h2>
-<!--![CDA experimental interface](img/CDA.png)-->
-
-<p><img src="img/CDA.png" style="width:900px; align-content: center"></p>
-<!--Eric, the options for resizing in reveal.js depend on the available extensions and markdown "version" [ideas?]-->
-
-<!--Layout Legend: 
-CDA user interface in BCS environment. Traders use the action box (bottom right) to adjust choices at any moment during the trading period. To (re)enter as a market maker she clicks the “maker” button or just drags the “Spread” bar to adjust s. To (re)enter as a sniper, she clicks the “snipe” button. By clicking the “Out” button, a player cancels any limit orders, deactivates sniping bots and unsubscribes from speed services. The event history box (top left) displays the time path of the fundamental value V(t) as a piecewise constant blue line, the trader’s own bid and ask as black horizontal lines, investor transactions as green vertical lines, snipe events as red vertical lines, and other traders’ limit orders as gray horizontal lines. The information box (top right) displays the current bid-ask spread, other traders’ status and the cost of speed cs. The profit history box (bottom left) displays players’ accumulated profit at each moment of time.-->
-
-<!--Figure Events Legend: 
-The event history box indicates that player 1 is about 48 seconds into the trading day, and has been a maker for at least 30 seconds. Her current spread of 1.21 is the best (smallest) of the two current makers. Investors arrived around seconds 23 and 26 with market orders to buy and sell, respectively. The green vertical lines in the event history box at those times, and the corresponding upward jumps in the profit history box, show her resulting profit. Around second 30, V jumped from about 100 to 102 and player got sniped by player 4, reflected in the red vertical line connecting the stale quote to the new V and the corresponding drop in profit. Note that profit is flat between events if “Speed” is turned off, but has a slight negative slope (of cs) when “Speed” is activated.
--->
-
-<hr />
-<h2 id="fba-in-the-lab">FBA in the Lab</h2>
-<p><img src="img/FBA.png" style="width:900px; align-content: center"></p>
-<!--![FBA Interface](img/FBA.png)-->
-
-<!--Figure Layout Legend: FBA user interface in basic BCS environment. The action box, information box and profit history box are essentially the same as in Figure 2. In the event history box (top left), the thin black horizontal line segments depict V(t), and the gray vertical lines separate the 5-second batching intervals. The color-coded ticks depict the order book at auction times: blue for own orders, lighter blue for other traders’ orders and light purple for investors. Trader 1’s own filled orders (and those of other traders) are indicated by a green (gray) dot behind the corresponding tick. The red tick shows the clearing price.-->
-
-<!--Play / Events Legend:
- Total time 48 seconds. A buying investor arrived during the batching interval [20,25), and a selling investor arrived during the batching interval [30,35). In both batches, trader 1 had the best spread (at 0.9) and had an order filled profitably. 
- Snipers not depicted in the figure. -->
 
 <hr />
 <h2 id="summary-results">Summary Results</h2>
@@ -551,6 +515,53 @@ The event history box indicates that player 1 is about 48 seconds into the tradi
 </tbody>
 </table>
 <hr />
+<!------------------------------------------------------------>
+
+<!--## Pilot Session-->
+
+<!--* Simplest lab environment is adapted from BCS.-->
+
+<p><!---->
+<!--* Single asset, single exchange, continuous price.--></p>
+<!--* $\smash{V(t)}$: exogenous, compound Poisson process, jump rate $\smash{λ_V}$, jump distribution $\smash{F_V}$.-->
+
+<p><!---->
+<!--* Automated investors: exogenous stream of market buy/sell orders, Poisson arrival rates $\smash{\lambda_I}$.--></p>
+<!--* Traders control bots/algorithms which place orders on their behalf, conditional on market conditions and strategies (_{out, making, sniping}_, _{fast, slow}_).-->
+
+<!-- The simplest lab environment is adapted from BCS. A single asset is traded on a single exchange, and price is a continuous variable. The fundamental value V(t) is determined exogenously by a compound Poisson process with arrival rate λ_V and jump distribution F_V. Players’ profit opportunities come from “investors” represented by an exogenous stream of unit market orders to buy (limit price very high) and to sell (limit price 0) with Poisson arrival rates λ_B=λ_S=λ_I.-->
+
+<!-- -------------------------------------------------------- -->
+
+<!-- ## CDA in the Lab -->
+
+<!--![CDA experimental interface](img/CDA.png)-->
+
+<!-- <img src="img/CDA.png" style="width:900px; align-content: center"> -->
+
+<!--Eric, the options for resizing in reveal.js depend on the available extensions and markdown "version" [ideas?]-->
+
+<!--Layout Legend: 
+CDA user interface in BCS environment. Traders use the action box (bottom right) to adjust choices at any moment during the trading period. To (re)enter as a market maker she clicks the “maker” button or just drags the “Spread” bar to adjust s. To (re)enter as a sniper, she clicks the “snipe” button. By clicking the “Out” button, a player cancels any limit orders, deactivates sniping bots and unsubscribes from speed services. The event history box (top left) displays the time path of the fundamental value V(t) as a piecewise constant blue line, the trader’s own bid and ask as black horizontal lines, investor transactions as green vertical lines, snipe events as red vertical lines, and other traders’ limit orders as gray horizontal lines. The information box (top right) displays the current bid-ask spread, other traders’ status and the cost of speed cs. The profit history box (bottom left) displays players’ accumulated profit at each moment of time.-->
+
+<!--Figure Events Legend: 
+The event history box indicates that player 1 is about 48 seconds into the trading day, and has been a maker for at least 30 seconds. Her current spread of 1.21 is the best (smallest) of the two current makers. Investors arrived around seconds 23 and 26 with market orders to buy and sell, respectively. The green vertical lines in the event history box at those times, and the corresponding upward jumps in the profit history box, show her resulting profit. Around second 30, V jumped from about 100 to 102 and player got sniped by player 4, reflected in the red vertical line connecting the stale quote to the new V and the corresponding drop in profit. Note that profit is flat between events if “Speed” is turned off, but has a slight negative slope (of cs) when “Speed” is activated.
+-->
+
+<!-- -------------------------------------------------------- -->
+
+<!-- ## FBA in the Lab -->
+
+<!-- <img src="img/FBA.png" style="width:900px; align-content: center"> -->
+
+<!--![FBA Interface](img/FBA.png)-->
+
+<!--Figure Layout Legend: FBA user interface in basic BCS environment. The action box, information box and profit history box are essentially the same as in Figure 2. In the event history box (top left), the thin black horizontal line segments depict V(t), and the gray vertical lines separate the 5-second batching intervals. The color-coded ticks depict the order book at auction times: blue for own orders, lighter blue for other traders’ orders and light purple for investors. Trader 1’s own filled orders (and those of other traders) are indicated by a green (gray) dot behind the corresponding tick. The red tick shows the clearing price.-->
+
+<!--Play / Events Legend:
+ Total time 48 seconds. A buying investor arrived during the batching interval [20,25), and a selling investor arrived during the batching interval [30,35). In both batches, trader 1 had the best spread (at 0.9) and had an order filled profitably. 
+ Snipers not depicted in the figure. -->
+
 <h2 id="next-steps-and-discussion">Next Steps and Discussion</h2>
 <ul>
 <li>
