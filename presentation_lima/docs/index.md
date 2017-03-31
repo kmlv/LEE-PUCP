@@ -82,7 +82,7 @@ Pero...
 
 ------
 
-## Economía experimental: inicios
+## Economía experimental (Lab): inicios
 
 * Chamberlain, 1948; Allais, 1953;
 <!-- monopolistic competition theory. imperfect competition. have conducted "not only the first market experiment, first economic experiment of any kind," classroom, illustrate how prices don't necessarily reach equilibrium. most market prices are determined by monopolistic and competitive aspects.-->
@@ -126,12 +126,11 @@ _"La economía experimental es esencialmente un método de investigación empír
 
 ## EE contribuciones (I): instituciones de mercado
 
-
 * Cientos (en realidad, miles) de experimentos para estudiar mecanismos de mercado se han realizado después de Smith et al.
 
 * Agregación de información: Plott y Sunder, 1982, 1988; Forsythe y Lundholm, 1990; Copeland y Friedman, 1987, 1991.
 
-* Convergencia al equilibrio de expectativas racionales: Forsythe et al, 1982, 1984; Friedman et al, 1984; Anderson et al, 1991.
+* Expectativas en convergencia al equilibrio: Forsythe et al, 1982, 1984; Friedman et al, 1984; Anderson et al, 1991.
 
 * Burbujas de precios:  Smith et al, 1988; Noussair y Tucker, 2006.
 
@@ -144,7 +143,7 @@ _"La economía experimental es esencialmente un método de investigación empír
 
     * Riesgo: _prospect theory_, aversión a la pérdida y efecto dotación (Tversky and Kahneman, 1979; Kahneman, Knetsch, Thaler, 1990;...)
 
-    * preferencias sociales: aversión a la desigualdad, altruismo, confianza (Fehr & Schmidt, 1999; Rabin, 1993; Charness & Rabin, 2001, Andreoni and Miller, 2002;...)
+    * preferencias sociales: aversión a la desigualdad, altruismo, confianza (Fehr & Schmidt, 1999; Charness & Rabin, 2001, Andreoni and Miller, 2002; Choi et al, 2006; ...)
 
 -----
 
@@ -152,7 +151,7 @@ _"La economía experimental es esencialmente un método de investigación empír
 
 </b>
 
-<center> Prospect theory: $ U(L) = \\sum_{i=1}^{i=n} w(p_i) v(x_i) $ </center>
+<center> Prospect theory: $ U(L,r) = \\sum_{i=1}^{i=n} w(p_i) v(x_i - r) $ </center>
 
 </b>
 
@@ -183,6 +182,8 @@ Objeciones comunes (basado en Levit y List, 2007):
 *	(in)validez externa.
 <!--  * El criterio para una validación externa no está claro, es mejor tratar la evidencia de laboratorio y del campo como complementarias: mayor control de variables vs mayor varianza. -->
 
+<center> Metodología defensiva vs escepticismo </center>
+
 ------
 
 # Aspectos prácticos del laboratorio de economía
@@ -203,7 +204,7 @@ Objeciones comunes (basado en Levit y List, 2007):
     * Formación de pagos
 
 * Framing:
-    * instrucciones/interface.
+    * Instrucciones/interface.
 
 -----
 
@@ -211,21 +212,23 @@ Objeciones comunes (basado en Levit y List, 2007):
 
 * A diferencia de los experimentos en otras disciplinas (e.g. psicología), en economía:
 
-    * No se usa engaño: cambian las creencias en futuras interacciones - genera ruido.
+    * No se usa engaño: cambian las creencias en futuras interacciones, genera ruido.
 
-    * Se proveen incentivos monetarios: la evidencia es (débilmente) a favor.
+    * Se proveen incentivos monetarios: la evidencia está (débilmente) a favor de brindarlos.
 
----
+    * Uso de la aleatorización para generar equivalencia entre "tratamientos" o formatos de interacción (e.g. evitar auto-selección entre condiciones)
+
+------
 
 ## Componentes del laboratorio
 
-(1) Pool de participantes / sujetos
+1) Pool de participantes / sujetos
 
-* sistema de reclutamiento (e.g. orsee.org); base de datos; sistema de anuncio e invitación; filtros por características e historia de participación.
+* Sistema de reclutamiento (e.g. www.orsee.org); base de datos; sistema de anuncios e invitación; filtros por características e historia de participación.
 
 2) Laboratorio (físico)
 
-* terminales, red local, programas de control de terminales "cliente"
+* terminales, red local, programas de control de terminales "cliente", otros instrumentos de medición (cámaras, sensores, etc)
 
 -------------------------------------------------------------------------
 
@@ -233,13 +236,13 @@ Objeciones comunes (basado en Levit y List, 2007):
 
 3) Software de interface e interacción
 
-    * interface vinculado a una base de datos que se actualiza de acuerdo a las reglas del juego y con las acciones de los participantes (e.g. zTree o oTree).
+    * interface vinculado a una base de datos que se actualiza de acuerdo a las reglas del juego y con las acciones de los participantes (e.g. zTree o oTree.org).
 
 4) Sistema de pagos:
 
-    * usualmente manual
+    * usualmente manual, depende de la institución que procesa los fondos
 
-5) Comités de revisión
+5) Comités de revisión (IRB)
 
     * varían de institución a institución
 
