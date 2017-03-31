@@ -187,47 +187,63 @@ Objeciones comunes (basado en Levit y List, 2007):
 
 # Aspectos prácticos del laboratorio de economía
 
-------
-
-## Componentes del laboratorio
-
-1. Pool de participantes / sujetos
-
-    * sistema de reclutamiento (e.g. orsee.org); base de datos; sistema de anuncio e invitación; filtros por características e historia de participación.
-
-2. Laboratorio (físico)
-
-    * terminales, red local, programas de control de terminales "cliente"
-
-3. Software de interface e interacción
-
-    * interface vinculado a una base de datos que se actualiza de acuerdo a las reglas del juego y con las acciones de los participantes (e.g. zTree o oTree).
-
-4. Sistema de pagos
-
-    * usualmente manual
+![](http://experimental.econ.umd.edu/experimental.jpg)
 
 ------
 
 ## Componentes de un experimento
 
-## Ambiente:
-O Preferencias, tecnologías, dotación inicial
-O ... implementado por incentivos monetarios apropiados.
-• Institución (Reglas del juego) o Acciones factibles
-O Secuencia de acciones
-O Condiciones de información
-O Los experimentos de laboratorio a menudo (implícita o explícitamente) definen un juego. => La teoría de juegos y la economía experimental están fuertemente relacionadas y se afectan entre sí.
-• Encuadre de instrucciones.
+* Ambiente:
+    * Preferencias, tecnologías, dotación inicial
 
+* Institución (Reglas del juego):
+    * Acciones factibles
+    * Secuencia de acciones
+    * Condiciones de información
+    * Formación de pagos
 
------
-
-## ...
+* Framing:
+    * instrucciones/interface.
 
 -----
 
-## Aplicación al diseño de mercados
+## Características de un experimento
+
+* A diferencia de los experimentos en otras disciplinas (e.g. psicología), en economía:
+
+    * No se usa engaño: cambian las creencias en futuras interacciones - genera ruido.
+
+    * Se proveen incentivos monetarios: la evidencia es (débilmente) a favor.
+
+---
+
+## Componentes del laboratorio
+
+(1) Pool de participantes / sujetos
+
+* sistema de reclutamiento (e.g. orsee.org); base de datos; sistema de anuncio e invitación; filtros por características e historia de participación.
+
+2) Laboratorio (físico)
+
+* terminales, red local, programas de control de terminales "cliente"
+
+-------------------------------------------------------------------------
+
+## Componentes del laboratorio
+
+3) Software de interface e interacción
+
+    * interface vinculado a una base de datos que se actualiza de acuerdo a las reglas del juego y con las acciones de los participantes (e.g. zTree o oTree).
+
+4) Sistema de pagos:
+
+    * usualmente manual
+
+5) Comités de revisión
+
+    * varían de institución a institución
+
+-------------------------------------------------------------------------
 
 
 
