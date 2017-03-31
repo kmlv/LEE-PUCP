@@ -79,22 +79,25 @@
                 <li class="toctree-l3"><a href="#diseno-de-la-investigacion">Diseño de la investigación</a></li>
                 
             
-                <li class="toctree-l3"><a href="#baseline-market-format">Baseline Market Format</a></li>
+                <li class="toctree-l3"><a href="#formato-baseline">Formato baseline</a></li>
                 
             
-                <li class="toctree-l3"><a href="#alternative-market-formats">Alternative Market Formats</a></li>
+                <li class="toctree-l3"><a href="#formatos-de-mercado-alternativos">Formatos de mercado alternativos</a></li>
                 
             
-                <li class="toctree-l3"><a href="#laboratory-implementation">Laboratory Implementation</a></li>
+                <li class="toctree-l3"><a href="#implementacion-en-el-laboratorio">Implementación en el laboratorio</a></li>
                 
             
-                <li class="toctree-l3"><a href="#cda-equilibrium-in-bcs">CDA Equilibrium in BCS</a></li>
+                <li class="toctree-l3"><a href="#ambiente-de-lab-1-cda-en-bcs">Ambiente de lab 1: CDA en BCS</a></li>
                 
             
-                <li class="toctree-l3"><a href="#fba-in-general">FBA in General</a></li>
+                <li class="toctree-l3"><a href="#ambiente-de-lab-1-cda-en-bcs_1">Ambiente de lab 1: CDA en BCS</a></li>
                 
             
-                <li class="toctree-l3"><a href="#fba-equilibrium-in-bcs">FBA Equilibrium in BCS</a></li>
+                <li class="toctree-l3"><a href="#ambiente-de-lab-2-fba-en-bcs">Ambiente de lab 2: FBA en BCS</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#ambiente-de-lab-2-fba-en-bcs_1">Ambiente de lab 2: FBA en BCS</a></li>
                 
             
                 <li class="toctree-l3"><a href="#pilot-experiment">Pilot Experiment</a></li>
@@ -222,134 +225,114 @@ University of California, Santa Cruz</p>
 <hr />
 <h2 id="diseno-de-la-investigacion">Diseño de la investigación</h2>
 <ul>
-<li><strong> Examinar 3 formatos </strong>:</li>
+<li>
+<p><strong>Examinar 3 formatos de mercado</strong>:</p>
+<ul>
+<li>Subasta doble continua (CDA).
+    </li>
+<li>Dos alternativas:  FBA, IEX.</li>
 </ul>
-<p>* Subasta doble continua (CDA).
-    
-     * Tres alternativas - FBA, IEX.</p>
-<p><strong> </strong> Dos etapas **:</p>
+</li>
+</ul>
+<p><strong> </strong>Dos etapas**:</p>
 <p>* Laboratorio (en curso).
-     * Campo (torneo abierto - etapa temprana).
+     * Campo (torneo abierto, en inicios).
  
-* <strong> Resultados y métricas de desempeño </strong>: liquidez, estabilidad y costos de transacción.</p>
-<!-- ## Research Design   -->
+* <strong>Resultados y métricas de desempeño</strong>: liquidez, estabilidad y costos de transacción.</p>
+<hr />
+<h2 id="formato-baseline">Formato baseline</h2>
+<ul>
+<li>Formato de mercado base: subasta doble continua (CDA)</li>
+</ul>
+<p>* Organiza el comercio en casi todos los principales intercambios.
+     
+     * Pedidos procesados inmediatamente con prioridad de precio-tiempo.
+ 
+     * La tecnología de velocidad es crucial.</p>
+<hr />
+<h2 id="formatos-de-mercado-alternativos">Formatos de mercado alternativos</h2>
+<p>* Formatos alternativos intentan reducir los incentivos por velocidad.
+   
+    1. Subasta por lote frecuente (FBA): igualdad de prioridad a los pedidos recibidos en el mismo lote (por ejemplo, durante una décima de segundo).</p>
+<pre><code>2. IEX: retrasa las órdenes entrantes en 350 $ \ smash {\ mu} $ s, permite órdenes ocultas y "vinculadas".
 
-<!-- * **Examine 3 formats**: -->
-
-<pre><code>&lt;!-- * Continuous Double Auction (CDA). --&gt;
-
-&lt;!-- * Three alternatives -- FBA, IEX. --&gt;
+3. Otros
 </code></pre>
-<!-- * **Two stages**: -->
-
-<pre><code>&lt;!-- * Laboratory (ongoing). --&gt;
-&lt;!-- * Field (open tournament - early stage). --&gt;
-</code></pre>
-<p><!--  -->
-<!-- * **Outcomes and metrics of performance**: liquidity, stability, and transactions costs. --></p>
 <hr />
-<h2 id="baseline-market-format">Baseline Market Format</h2>
+<h2 id="implementacion-en-el-laboratorio">Implementación en el laboratorio</h2>
 <ul>
-<li>
-<p>Baseline market format: Continuous Double Auction (CDA) </p>
-<ul>
-<li>
-<p>Organizes trade in nearly all major exchanges.</p>
-</li>
-<li>
-<p>Orders processed immediately with price-time priority.</p>
-</li>
-<li>
-<p>Speed technology is crucial.</p>
-</li>
+<li>Entorno de laboratorio <u> simple </u>:</li>
 </ul>
+<p>* Basado en Budish, Cramton y Shim (BCS, 2015).
+    
+     * CDA y FBA</p>
+<ul>
+<li>
+<p>Los participantes operan algoritmos que envían órdenes en su nombre.</p>
+</li>
+<li>
+<p>Se añaden características pertinentes de los intercambios modernos de uno en uno.</p>
 </li>
 </ul>
 <hr />
-<h2 id="alternative-market-formats">Alternative Market Formats</h2>
+<h2 id="ambiente-de-lab-1-cda-en-bcs">Ambiente de lab 1: CDA en BCS</h2>
+<p>* No hay asim de información o costos de inventario, todos son neutrales al riesgo.</p>
 <ul>
 <li>
-<p>Three alternative formats attempt to reduce the incentives for speed.</p>
-<ol>
-<li>
-<p>Frequent batch auction (FBA): equal priority to orders received in the same batch (e.g. a tenth of a second).</p>
+<p>Valor fundamental, públicamente observado  $ V(t) $ (Poisson jump process),</p>
 </li>
 <li>
-<p>IEX: delays incoming orders by 350 $\smash{\mu}$s, allows hidden, “pegged” orders.</p>
+<p>Inversores exógenos llegan al mercado aleatoriamente</p>
 </li>
 <li>
-<p>EBS: within a narrow time window, randomizes the sequence in which orders are processed.</p>
+<p>"Makers" postean bids/asks y "snipers" esperan oportunidades de arbitraje.</p>
 </li>
-</ol>
+<li>
+<p>Después de un salto de $ V $:</p>
+<ul>
+<li>
+<p><em>Makers</em> tratan de actualizar.</p>
+</li>
+<li>
+<p><em>snipers</em> tratan de comprar (vender) una cotización "obsoleta" y liquidar al nuevo valor fundamental.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Hay la posibilidad de reducir latency con subscripción a una mejor tecnología de comunicación.</p>
 </li>
 </ul>
 <hr />
-<h2 id="laboratory-implementation">Laboratory Implementation</h2>
+<h2 id="ambiente-de-lab-1-cda-en-bcs_1">Ambiente de lab 1: CDA en BCS</h2>
 <ul>
 <li>
-<p>Formats in simple laboratory environment:</p>
-<ul>
-<li>
-<p>Based on Budish, Cramton and Shim (BCS, 2015).</p>
+<p>En equilibrio, el <em>market spread</em> es positivo $ s^* &gt; 0 $ , pero...</p>
 </li>
 <li>
-<p>CDA and FBA</p>
-</li>
-</ul>
+<p>No hay ganancias por que hay que pagar la subscripción</p>
 </li>
 <li>
-<p>Participants tune algorithms that place orders on their behalf. </p>
-</li>
-<li>
-<p>Will add relevant features of modern exchanges one at a time. </p>
+<p>Sólo queda un maker y el resto es sniper</p>
 </li>
 </ul>
 <hr />
-<h2 id="cda-equilibrium-in-bcs">CDA Equilibrium in BCS</h2>
+<h2 id="ambiente-de-lab-2-fba-en-bcs">Ambiente de lab 2: FBA en BCS</h2>
 <ul>
 <li>
-<p>No asym. info or inventory costs, everyone risk neutral.</p>
+<p>Las órdenes de compra venta son recibidas de forma continua.</p>
 </li>
 <li>
-<p>Bertrand competition, but equilibrium spread &gt; 0. </p>
+<p>El día de negociación es dividido en muchas fases de igual duración, el batch o lote ($ \tau $).</p>
 </li>
 <li>
-<p>Positive spread is related to jumps in $\smash{V(t)}$:</p>
-<ul>
-<li>
-<p>Maker sends a replace order.</p>
+<p>Al cierre del batch, todas las órdenes de compra (venta) se combinan para generar una curva de demanda escalonada (oferta).</p>
 </li>
 <li>
-<p>Others try to buy (sell) at stale quote and liquidate at new
-  fundamental ("snipe").</p>
-</li>
-<li>
-<p>Sniping probability $\smash{\frac{N-1}{N}}$.</p>
-</li>
-<li>
-<p>Sniping generates arbitrage rents paid by investors.</p>
-</li>
-</ul>
+<p>Se calcula el precio de equilibrio $ p^\star $, y las ordenes inframargales se ejecutan a dicho precio.</p>
 </li>
 </ul>
 <hr />
-<h2 id="fba-in-general">FBA in General</h2>
-<ul>
-<li>
-<p>Orders are (still) continuously time-stamped.</p>
-</li>
-<li>
-<p>Trading day divided into many equal-length <em>submission stages</em> (of length $\smash{\tau}$).</p>
-</li>
-<li>
-<p>At closing, all standing buy (sell) orders are combined to generate a stair-step demand (supply) curve.</p>
-</li>
-<li>
-<p>Market clearing (equilibrium) price $\smash{p^\star}$ is computed, and infra-marginal bids and asks are executed at a uniform price $\smash{p^\star}$.</p>
-</li>
-</ul>
-<hr />
-<h2 id="fba-equilibrium-in-bcs">FBA Equilibrium in BCS</h2>
+<h2 id="ambiente-de-lab-2-fba-en-bcs_1">Ambiente de lab 2: FBA en BCS</h2>
 <ul>
 <li>
 <p>Bertrand competition: Zero bid-ask spread.</p>
