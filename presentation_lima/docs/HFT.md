@@ -1,13 +1,13 @@
 ## Experimentos en Transacciones de Alta Frecuencia
 
 
-#### Eric Aldrich,  Dan Friedman,  Kristian López-Vargas
+Eric Aldrich,  Dan Friedman,  Kristian López-Vargas
 <!--Let's discuss scope of presentation (whole vs lab); Where do we mention Peter? etc-->
-#### University of California, Santa Cruz
+University of California, Santa Cruz
 
-#### Pontificia Universidad Católica del Perú
+Pontificia Universidad Católica del Perú
 
-#### Lima, marzo 2017
+Lima, marzo 2017
 
 
 --------------------------------------------------------
