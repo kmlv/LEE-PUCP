@@ -218,12 +218,6 @@ Lima, marzo 2017
     
 * In FBA, batch interval was 5 secs (1.25 secs, market time); reporting lag was essentially zero; default latency / interval = 0.1.
 
-<!--(In our pilot experiment, the ratio is 0.5/5 = 0.10; in more realistic settings it might be closer to 0.01.)
-<!--On August 10, 2016 we conducted a pilot experiment with a Redwood II prototype of CDA and FBA matching engines, using the interfaces shown in Figures 2 and 3. In each format, two groups of four players each completed three five-minute periods. Each period, stochastic realizations using λ_V= 4, λ_B=λ_S=λ_I= 3, F_V  = N(0,0.5), cs=$0.01/sec, τ = 0.5 sec and initial V = 100 were matched across groups and formats; each trading period here roughly translates to a 80 second segment on the NASDAQ OMX exchange for the high-volume SPY contract. In FBA, the batching interval was 5 seconds and the reporting lag was essentially zero.-->
-<!--We found a weak uptrend for snipers in CDA, but the share never exceeded 43%; in equilibrium of the BCS model the sniper share is 75%. In FBA the sniper share trended down, as predicted in BCS equilibrium, and fell below 20% in period 3. Almost all other players were makers; Out shares were always miniscule. The share of traders choosing speed trended up in CDA as predicted, reaching almost ⅔ in period 3, and trended down (also consistent with prediction) in FBA, falling to 11% in period 3. -->
-
-<!--(In our pilot experiment, the ratio is 0.5/5 = 0.10; in more realistic settings it might be closer to 0.01.)-->
-
 ----------------------------------------------------
 
 ## Summary Results
@@ -293,32 +287,32 @@ The event history box indicates that player 1 is about 48 seconds into the tradi
  Snipers not depicted in the figure. -->
 
 
-##  Next Steps and Discussion
+<!-- ##  Next Steps and Discussion -->
 
-* Development and Productions.
+<!-- * Development and Productions. -->
 
-* More realism in environment. 
+<!-- * More realism in environment.  -->
 
-* Evidence from the lab and tournaments will improve understanding of
-  financial market design (help regulation and policy)
+<!-- * Evidence from the lab and tournaments will improve understanding of -->
+  <!-- financial market design (help regulation and policy) -->
 
-* Our infrastructure will be a contribution for future research. 
+<!-- * Our infrastructure will be a contribution for future research.  -->
 
 <!--Exploring these differing environments will contribute to fundamental knowledge regarding financial market design. By introducing features one at a time, we will make strong inferences about which environmental aspects shape observed outcomes. By holding constant the realized stochastic process across market formats in any given environment, we can draw causal conclusions regarding comparative performance. For example, we will be able to make clear statements such as “relative to the basic CDA baseline, the IEX format lowers trading cost by 5-8% in normal environment X, but increases value-at-risk by 20-30% in stressful environment Y.” Such statements should help focus conventional econometric analysis of market data, and even by themselves should be helpful for regulators and exchange officials. -->
 
 <!--We have started the lab stage developing simple environments that allow for HFT. Our current progress and preliminary evidence are encouraging on the feasibility of the project and and the quality of the collected evidence. Further evidence from the laboratory and the implementation of tournaments will constitute valuable scientific knowledge on which formats best promote financial market liquidity and stability and, thus, help improve the design of financial markets. Our research infrastructure will be an important contribution for future research on financial market design. -->
 
---------------------------------------------------
+<!-- -------------------------------------------------- -->
 
-##  Thanks to
+<!-- ##  Thanks to -->
 
-* Center for Analytical Finance.
+<!-- * Center for Analytical Finance. -->
 
-* Undergraduate programmers, Morgan Grant and Zach Petersen.
+<!-- * Undergraduate programmers, Morgan Grant and Zach Petersen. -->
 
-* University of Maryland postdocs, Darrell Hoy and David Malec.
+<!-- * University of Maryland postdocs, Darrell Hoy and David Malec. -->
 
---------------------------------------------------
+<!-- -------------------------------------------------- -->
 
 
 
@@ -339,7 +333,7 @@ cd ..
 cd docs && \
 pandoc  \
 -t revealjs -V revealjs-url=reveal.js \
---css=reveal.js/css/theme/simple.css \
+--css=reveal.js/css/theme/black.css \
 -H reveal.js/js/revealMathJax.js \
 -s HFT.md -o HFT.html && \
 cd .. && \
