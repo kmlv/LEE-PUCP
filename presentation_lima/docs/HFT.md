@@ -5,7 +5,6 @@ Eric Aldrich,  Dan Friedman,  Kristian López-Vargas
 <!--Let's discuss scope of presentation (whole vs lab); Where do we mention Peter? etc-->
 University of California, Santa Cruz
 
-<b/>
 
 Pontificia Universidad Católica del Perú
 
@@ -324,7 +323,7 @@ The event history box indicates that player 1 is about 48 seconds into the tradi
 cd docs && \
 pandoc  \
 -t revealjs -V revealjs-url=reveal.js \
---css=reveal.js/css/theme/black.css \
+--css=reveal.js/css/theme/simple.css \
 -H reveal.js/js/revealMathJax.js \
 -s HFT.md -o HFT.html && \
 cd ..
