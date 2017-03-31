@@ -11,6 +11,22 @@
 
     
     <url>
+     <loc>/presentation/</loc>
+     <lastmod>2017-03-31</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/hft/</loc>
+     <lastmod>2017-03-31</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
      <loc>/appendix/</loc>
      <lastmod>2017-03-31</lastmod>
      <changefreq>daily</changefreq>
