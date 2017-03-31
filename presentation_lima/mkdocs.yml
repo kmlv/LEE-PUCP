@@ -3,7 +3,7 @@ theme: readthedocs
 pages:
     - Home: index.md
     - Presentation: presentation.md
-    - HFT: hft.md
+    - HFT: HFT.md
     - Appendix: appendix.md
 
 extra_css: [extra.css]

@@ -270,3 +270,35 @@ The event history box indicates that player 1 is about 48 seconds into the tradi
 * Undergraduate programmers, Morgan Grant and Zach Petersen.
 
 * University of Maryland postdocs, Darrell Hoy and David Malec.
+
+--------------------------------------------------
+
+
+
+<!--
+
+// This piece of code below creates the reveal presentation and pushes to GitHub and then deploys to GitHub pages. Modify the commit message and paste it into terminal.
+
+
+cd docs && \
+pandoc  \
+-t revealjs -V revealjs-url=reveal.js \
+--css=reveal.js/css/theme/black.css \
+-H reveal.js/js/revealMathJax.js \
+-s HFT.md -o HFT.html && \
+cd ..
+
+
+cd docs && \
+pandoc  \
+-t revealjs -V revealjs-url=reveal.js \
+--css=reveal.js/css/theme/simple.css \
+-H reveal.js/js/revealMathJax.js \
+-s HFT.md -o HFT.html && \
+cd .. && \
+git add docs/* && \
+git commit -am " add content to HFT.md " && \
+git push origin master && \
+mkdocs gh-deploy
+
+-->
