@@ -189,7 +189,7 @@ Objeciones comunes (basado en Levit y List, 2007):
 
 ------
 
-# Aspectos prácticos del laboratorio de economía
+# 2. Aspectos prácticos del laboratorio de economía
 
 ![](http://experimental.econ.umd.edu/experimental.jpg)
 
@@ -251,6 +251,7 @@ Objeciones comunes (basado en Levit y List, 2007):
 
 -------------------------------------------------------------------------
 
+# 3. Aplicación
 
 
 <!-- ------ -->

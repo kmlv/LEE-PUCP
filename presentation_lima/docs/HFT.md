@@ -1,51 +1,87 @@
-## Experiments in High-Frequency Trading
+## Experimentos en Transacciones de Alta Frecuencia
 
 
 Eric Aldrich,  Dan Friedman,  Kristian López-Vargas 
 <!--Let's discuss scope of presentation (whole vs lab); Where do we mention Peter? etc-->
-
 University of California, Santa Cruz
 
-Experimental Finance Conference | Tucson, 2016
+<b/>
+
+Pontificia Universidad Católica del Perú
+
+Lima, marzo 2017
 
 
 --------------------------------------------------------
+## Motivación
 
-## Motivation 
+* La velocidad de transacciones ha disminuido rápidamente.
 
-* Trading latencies have rapidly declined. 
+* las Transacciones de Alta Frecuencia (HFTs) representan una gran fracción de operaciones en todo el mundo.
 
-* HFTs account for a large fraction of trades worldwide.
+* A favor: HFT aumenta la liquidez, reduce los costos de transacción.
 
-* Proponents: HFT increases liquidity, reduces transaction costs. 
+* En contra: El costo de la infraestructura de HFT es soportado por los inversionistas; La liquidez desaparece cuando más se necesita.
 
-* Opponents: The cost of HFT infrastructure is borne by investors; liquidity vanishes when most needed.
+<!-- ## Motivation  -->
+
+<!-- * Trading latencies have rapidly declined.  -->
+
+<!-- * HFTs account for a large fraction of trades worldwide. -->
+
+<!-- * Proponents: HFT increases liquidity, reduces transaction costs.  -->
+
+<!-- * Opponents: The cost of HFT infrastructure is borne by investors; liquidity vanishes when most needed. -->
 
 --------------------------------------------------------
 
-## Research Plan  
+## Plan de investigación
 
-* Existing data are insufficient to resolve the controversy.
+* Los datos existentes son insuficientes para resolver la controversia.
 
-* Experiments are a superior alternative to scientifically compare market formats in the presence of HFT.
+* Los experimentos son una alternativa superior para comparar científicamente los formatos de mercado en presencia de HFT.
 
-* We use experiments (lab and field) to compare relevant market formats.
+* En este paper utilizamos experimentos (de laboratorio (y de campo)) para comparar formatos de mercado relevantes.
+
+<!-- ## Research Plan   -->
+
+<!-- * Existing data are insufficient to resolve the controversy. -->
+
+<!-- * Experiments are a superior alternative to scientifically compare market formats in the presence of HFT. -->
+
+<!-- * We use experiments (lab and field) to compare relevant market formats. -->
 
 --------------------------------------------------------
 
-## Research Design  
+## Diseño de la investigación
 
-* **Examine 4 formats**:
+* ** Examinar 3 formatos **:
 
-    * Continuous Double Auction (CDA).
-    * Three alternatives -- FBA, IEX, EBS. 
+     * Subasta doble continua (CDA).
+    
+     * Tres alternativas - FBA, IEX.
 
-* **Two stages**:
+** ** Dos etapas **:
 
-    * Laboratory (ongoing).
-    * Field (open tournament - early stage).
- 
-* **Outcomes and metrics of performance**: liquidity, stability, and transactions costs.
+     * Laboratorio (en curso).
+     * Campo (torneo abierto - etapa temprana).
+ 
+* ** Resultados y métricas de desempeño **: liquidez, estabilidad y costos de transacción.
+
+<!-- ## Research Design   -->
+
+<!-- * **Examine 3 formats**: -->
+
+    <!-- * Continuous Double Auction (CDA). -->
+
+    <!-- * Three alternatives -- FBA, IEX. -->
+
+<!-- * **Two stages**: -->
+
+    <!-- * Laboratory (ongoing). -->
+    <!-- * Field (open tournament - early stage). -->
+ <!--  -->
+<!-- * **Outcomes and metrics of performance**: liquidity, stability, and transactions costs. -->
  
 --------------------------------------------------------
 
