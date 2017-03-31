@@ -139,6 +139,13 @@ Lima, marzo 2017
 
 ----------------------------------------------------------
 
+## Ambiente de lab 1: CDA en BCS
+
+![](img/CDA.png)
+
+----------------------------------------------------------
+
+
 ## Ambiente de lab 2: FBA en BCS
 
 
@@ -152,18 +159,23 @@ Lima, marzo 2017
 
 ----------------------------------------------------------
 
-## Ambiente de lab 2: FBA en BCS
+## Ambiente de lab 2: FBA en BCS: Equilibrio
  
-* Bertrand competition: Zero bid-ask spread.
-    * $\smash{\forall \tau > 0}$ (discontinuity between CDA/FBA).
+* Casi todos los saltos del valor fundamental no ponen en riesgo las órdenes de los _makers_. Entonces el incentivo a ser rápido se desvanece.
 
-* (Slow) firms supply $\smash{\bar{Q}}$ units of liquidity at zero spread.
+* Competencia Bertrand: hasta alcanzar bid-ask spread nulo $ s^\* = 0 $.
 
-* $\smash{\tau >> \Delta \delta \Rightarrow}$ no one invests in speed:
+* Los snipers solo hacen ganancias en eventos muy improbables.
 
-$$\smash{\frac{\Delta\delta \, \lambda_V}{\tau} \, \mathbb{E}(J) \, \bar{Q} < c_{speed} }$$
+* Si $\smash{\tau >> \Delta \delta \Rightarrow}$ Nadie invierte en speed.
 
---------------------------------------------------------
+----------------------------------------------------------
+
+## Ambiente de lab 2: FBA en BCS:
+
+![](img/FBA.png)
+
+----------------------------------------------------------
 
 ## Pilot Experiment 
 
@@ -212,6 +224,26 @@ $$\smash{\frac{\Delta\delta \, \lambda_V}{\tau} \, \mathbb{E}(J) \, \bar{Q} < c_
 
 <!--(In our pilot experiment, the ratio is 0.5/5 = 0.10; in more realistic settings it might be closer to 0.01.)-->
 
+----------------------------------------------------
+
+## Summary Results
+
+| | MAKER | SNIPE | Speed | Spread | NumTrades | RMSE |
+| --- | :---: | :---: | :---: | :---: | :---: | :---: |
+| **CDA** | | | | | | |
+|P1 | 63.5% | 33.8% | 43.2% | 0.80 | 109.5 | 0.50% |
+|P2 | 62.2% | 35.5% | 53.5% | 0.46 | 140.5 | 0.37% |
+|P3 | 60.0% | 38.3% | 66.0% | 0.40 | 158.0 | 0.39% |
+| **FBA** | | | | | | |
+|P1 | 66.9% | 31.9% | 28.5% | 0.44 | 87.5 | 0.42% |
+|P2 | 74.2% | 25.0% | 22.3% | 0.25 | 85.0 | 0.26% |
+|P3 | 79.9% | 19.4% | 11.1% | 0.21 | 91.0 | 0.30% |
+| | | | | | | |
+
+--------------------------------------------------
+
+
+
 <!------------------------------------------------------------>
 
 <!--## Pilot Session-->
@@ -229,13 +261,13 @@ $$\smash{\frac{\Delta\delta \, \lambda_V}{\tau} \, \mathbb{E}(J) \, \bar{Q} < c_
 
 <!-- The simplest lab environment is adapted from BCS. A single asset is traded on a single exchange, and price is a continuous variable. The fundamental value V(t) is determined exogenously by a compound Poisson process with arrival rate λ_V and jump distribution F_V. Players’ profit opportunities come from “investors” represented by an exogenous stream of unit market orders to buy (limit price very high) and to sell (limit price 0) with Poisson arrival rates λ_B=λ_S=λ_I.-->
 
---------------------------------------------------------
+<!-- -------------------------------------------------------- -->
 
-## CDA in the Lab
+<!-- ## CDA in the Lab -->
 
 <!--![CDA experimental interface](img/CDA.png)-->
 
-<img src="img/CDA.png" style="width:900px; align-content: center">
+<!-- <img src="img/CDA.png" style="width:900px; align-content: center"> -->
 
 <!--Eric, the options for resizing in reveal.js depend on the available extensions and markdown "version" [ideas?]-->
 
@@ -246,11 +278,11 @@ CDA user interface in BCS environment. Traders use the action box (bottom right)
 The event history box indicates that player 1 is about 48 seconds into the trading day, and has been a maker for at least 30 seconds. Her current spread of 1.21 is the best (smallest) of the two current makers. Investors arrived around seconds 23 and 26 with market orders to buy and sell, respectively. The green vertical lines in the event history box at those times, and the corresponding upward jumps in the profit history box, show her resulting profit. Around second 30, V jumped from about 100 to 102 and player got sniped by player 4, reflected in the red vertical line connecting the stale quote to the new V and the corresponding drop in profit. Note that profit is flat between events if “Speed” is turned off, but has a slight negative slope (of cs) when “Speed” is activated.
 -->
 
---------------------------------------------------------
+<!-- -------------------------------------------------------- -->
 
-## FBA in the Lab
+<!-- ## FBA in the Lab -->
 
-<img src="img/FBA.png" style="width:900px; align-content: center">
+<!-- <img src="img/FBA.png" style="width:900px; align-content: center"> -->
 
 <!--![FBA Interface](img/FBA.png)-->
 
@@ -260,24 +292,6 @@ The event history box indicates that player 1 is about 48 seconds into the tradi
  Total time 48 seconds. A buying investor arrived during the batching interval [20,25), and a selling investor arrived during the batching interval [30,35). In both batches, trader 1 had the best spread (at 0.9) and had an order filled profitably. 
  Snipers not depicted in the figure. -->
 
-
-----------------------------------------------------
-
-## Summary Results 
-
-| | MAKER | SNIPE | Speed | Spread | NumTrades | RMSE |
-| --- | :---: | :---: | :---: | :---: | :---: | :---: |
-| **CDA** | | | | | | |
-|P1 | 63.5% | 33.8% | 43.2% | 0.80 | 109.5 | 0.50% |
-|P2 | 62.2% | 35.5% | 53.5% | 0.46 | 140.5 | 0.37% |
-|P3 | 60.0% | 38.3% | 66.0% | 0.40 | 158.0 | 0.39% |
-| **FBA** | | | | | | |
-|P1 | 66.9% | 31.9% | 28.5% | 0.44 | 87.5 | 0.42% |
-|P2 | 74.2% | 25.0% | 22.3% | 0.25 | 85.0 | 0.26% |
-|P3 | 79.9% | 19.4% | 11.1% | 0.21 | 91.0 | 0.30% |
-| | | | | | | |
-
---------------------------------------------------
 
 ##  Next Steps and Discussion
 
