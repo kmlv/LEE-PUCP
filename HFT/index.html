@@ -19,8 +19,8 @@
   <script>
     // Current page data
     var mkdocs_page_name = "HFT";
-    var mkdocs_page_input_path = "hft.md";
-    var mkdocs_page_url = "/hft/";
+    var mkdocs_page_input_path = "HFT.md";
+    var mkdocs_page_url = "/HFT/";
   </script>
   
   <script src="../js/jquery-2.1.1.min.js"></script>
@@ -574,6 +574,34 @@ The event history box indicates that player 1 is about 48 seconds into the tradi
 <p>University of Maryland postdocs, Darrell Hoy and David Malec.</p>
 </li>
 </ul>
+<hr />
+<!--
+
+// This piece of code below creates the reveal presentation and pushes to GitHub and then deploys to GitHub pages. Modify the commit message and paste it into terminal.
+
+
+cd docs && \
+pandoc  \
+-t revealjs -V revealjs-url=reveal.js \
+--css=reveal.js/css/theme/black.css \
+-H reveal.js/js/revealMathJax.js \
+-s HFT.md -o HFT.html && \
+cd ..
+
+
+cd docs && \
+pandoc  \
+-t revealjs -V revealjs-url=reveal.js \
+--css=reveal.js/css/theme/simple.css \
+-H reveal.js/js/revealMathJax.js \
+-s HFT.md -o HFT.html && \
+cd .. && \
+git add docs/* && \
+git commit -am " add content to HFT.md " && \
+git push origin master && \
+mkdocs gh-deploy
+
+-->
               
             </div>
           </div>
