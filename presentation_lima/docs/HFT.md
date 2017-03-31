@@ -55,107 +55,104 @@ Lima, marzo 2017
 
 ## Diseño de la investigación
 
-* ** Examinar 3 formatos **:
+* **Examinar 3 formatos de mercado**:
 
-     * Subasta doble continua (CDA).
+    * Subasta doble continua (CDA).
     
-     * Tres alternativas - FBA, IEX.
+    * Dos alternativas:  FBA, IEX.
 
-** ** Dos etapas **:
+** **Dos etapas**:
 
      * Laboratorio (en curso).
-     * Campo (torneo abierto - etapa temprana).
+     * Campo (torneo abierto, en inicios).
  
-* ** Resultados y métricas de desempeño **: liquidez, estabilidad y costos de transacción.
+* **Resultados y métricas de desempeño**: liquidez, estabilidad y costos de transacción.
 
-<!-- ## Research Design   -->
 
-<!-- * **Examine 3 formats**: -->
-
-    <!-- * Continuous Double Auction (CDA). -->
-
-    <!-- * Three alternatives -- FBA, IEX. -->
-
-<!-- * **Two stages**: -->
-
-    <!-- * Laboratory (ongoing). -->
-    <!-- * Field (open tournament - early stage). -->
- <!--  -->
-<!-- * **Outcomes and metrics of performance**: liquidity, stability, and transactions costs. -->
- 
 --------------------------------------------------------
 
-##  Baseline Market Format
+## Formato baseline
 
-* Baseline market format: Continuous Double Auction (CDA) 
+* Formato de mercado base: subasta doble continua (CDA)
 
-    * Organizes trade in nearly all major exchanges.
-     
-    * Orders processed immediately with price-time priority.
- 
-    * Speed technology is crucial.
-    
+     * Organiza el comercio en casi todos los principales intercambios.
+     
+     * Pedidos procesados inmediatamente con prioridad de precio-tiempo.
+ 
+     * La tecnología de velocidad es crucial.
+
 --------------------------------------------------------
 
-##  Alternative Market Formats
-     
-* Three alternative formats attempt to reduce the incentives for speed.
-   
-    1. Frequent batch auction (FBA): equal priority to orders received in the same batch (e.g. a tenth of a second).
+## Formatos de mercado alternativos
+     
+* Formatos alternativos intentan reducir los incentivos por velocidad.
+   
+    1. Subasta por lote frecuente (FBA): igualdad de prioridad a los pedidos recibidos en el mismo lote (por ejemplo, durante una décima de segundo).
 
-    2. IEX: delays incoming orders by 350 $\smash{\mu}$s, allows hidden, “pegged” orders.
-    
-    3. EBS: within a narrow time window, randomizes the sequence in which orders are processed.
-     
-       
+    2. IEX: retrasa las órdenes entrantes en 350 $ \ smash {\ mu} $ s, permite órdenes ocultas y "vinculadas".
+
+    3. Otros
+    
 --------------------------------------------------------
 
-##  Laboratory Implementation  
+## Implementación en el laboratorio
 
-* Formats in simple laboratory environment:
+* Entorno de laboratorio <u> simple </u>:
 
-    * Based on Budish, Cramton and Shim (BCS, 2015).
-    
-    * CDA and FBA
+     * Basado en Budish, Cramton y Shim (BCS, 2015).
+    
+     * CDA y FBA
 
-* Participants tune algorithms that place orders on their behalf. 
+* Los participantes operan algoritmos que envían órdenes en su nombre.
 
-* Will add relevant features of modern exchanges one at a time. 
+* Se añaden características pertinentes de los intercambios modernos de uno en uno.
 
 ---------------------------------------------------------
 
-## CDA Equilibrium in BCS
- 
-* No asym. info or inventory costs, everyone risk neutral.
+## Ambiente de lab 1: CDA en BCS
+ 
+* No hay asim de información o costos de inventario, todos son neutrales al riesgo.
 
-* Bertrand competition, but equilibrium spread > 0. 
- 
-* Positive spread is related to jumps in $\smash{V(t)}$:
-    
-    * Maker sends a replace order.
+* Valor fundamental, públicamente observado  $ V(t) $ (Poisson jump process),
 
-    * Others try to buy (sell) at stale quote and liquidate at new
-      fundamental ("snipe").
+* Inversores exógenos llegan al mercado aleatoriamente
+
+* "Makers" postean bids/asks y "snipers" esperan oportunidades de arbitraje.
+
+* Después de un salto de $ V $:
     
-    * Sniping probability $\smash{\frac{N-1}{N}}$.
-    
-    * Sniping generates arbitrage rents paid by investors.
+    * _Makers_ tratan de actualizar.
+
+    * _snipers_ tratan de comprar (vender) una cotización "obsoleta" y liquidar al nuevo valor fundamental.
+
+* Hay la posibilidad de reducir latency con subscripción a una mejor tecnología de comunicación.
+
+---------------------------------------------------------
+
+## Ambiente de lab 1: CDA en BCS
+
+* En equilibrio, el _market spread_ es positivo $ s^\* > 0 $ , pero...
+
+* No hay ganancias por que hay que pagar la subscripción
+
+* Sólo queda un maker y el resto es sniper
 
 ----------------------------------------------------------
 
-## FBA in General
+## Ambiente de lab 2: FBA en BCS
 
-* Orders are (still) continuously time-stamped.
 
-* Trading day divided into many equal-length _submission stages_ (of length $\smash{\tau}$).
+* Las órdenes de compra venta son recibidas de forma continua.
+
+* El día de negociación es dividido en muchas fases de igual duración, el batch o lote ($ \\tau $).
  
-* At closing, all standing buy (sell) orders are combined to generate a stair-step demand (supply) curve.
+* Al cierre del batch, todas las órdenes de compra (venta) se combinan para generar una curva de demanda escalonada (oferta).
 
-* Market clearing (equilibrium) price $\smash{p^\star}$ is computed, and infra-marginal bids and asks are executed at a uniform price $\smash{p^\star}$.
+* Se calcula el precio de equilibrio $ p^\star $, y las ordenes inframargales se ejecutan a dicho precio.
 
------------------------------------------------
+----------------------------------------------------------
 
-## FBA Equilibrium in BCS
+## Ambiente de lab 2: FBA en BCS
  
 * Bertrand competition: Zero bid-ask spread.
     * $\smash{\forall \tau > 0}$ (discontinuity between CDA/FBA).

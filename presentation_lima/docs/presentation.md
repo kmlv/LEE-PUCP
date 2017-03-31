@@ -1,5 +1,5 @@
 
-# Aplicaciones de Economía Experimental
+# La Economía Experimental
 
 </b>
 
@@ -59,7 +59,7 @@ Like astronomers or meteorologists, they generally must be content largely to ob
 
 Pero...
 
-* La astronomía (por ejemplo) sí se sirve del método experimental mediante por medio de otras ciencias básicas.
+* La astronomía (por ejemplo) sí se sirve del método experimental por medio de otras ciencias básicas.
 <!-- Hay poder predictivo porque sus fundamentos han sido construidos a en base a modelos testetados experimentalmente. Con ladrillos sólidos. -->
 
 * La imposibilidad de experimentar con cuerpos celestes (hasta hoy), no aplica a muchos objetos en la economía (e.g. el consumidor, el mercado, incluso una micro-economía).
